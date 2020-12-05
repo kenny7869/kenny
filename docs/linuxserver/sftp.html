@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>SFTP without SSH | Kenny&#39;s Lab</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    
+    <meta name="description" content="Lab memo">
+    
+    <link rel="preload" href="/kenny/assets/css/0.styles.822e6fbd.css" as="style"><link rel="preload" href="/kenny/assets/js/app.9eb3588d.js" as="script"><link rel="preload" href="/kenny/assets/js/2.bff8ff76.js" as="script"><link rel="preload" href="/kenny/assets/js/20.7a380b31.js" as="script"><link rel="prefetch" href="/kenny/assets/js/10.a9479bb9.js"><link rel="prefetch" href="/kenny/assets/js/11.69b3f43e.js"><link rel="prefetch" href="/kenny/assets/js/12.32e826cb.js"><link rel="prefetch" href="/kenny/assets/js/13.8da7b687.js"><link rel="prefetch" href="/kenny/assets/js/14.febb013f.js"><link rel="prefetch" href="/kenny/assets/js/15.fd3cf968.js"><link rel="prefetch" href="/kenny/assets/js/16.c8b69222.js"><link rel="prefetch" href="/kenny/assets/js/17.6210fc4b.js"><link rel="prefetch" href="/kenny/assets/js/18.7acf72c9.js"><link rel="prefetch" href="/kenny/assets/js/19.aad2254b.js"><link rel="prefetch" href="/kenny/assets/js/3.03d08e27.js"><link rel="prefetch" href="/kenny/assets/js/4.a2a0e85d.js"><link rel="prefetch" href="/kenny/assets/js/5.d8d21a59.js"><link rel="prefetch" href="/kenny/assets/js/6.dae1d669.js"><link rel="prefetch" href="/kenny/assets/js/7.ca37f3f3.js"><link rel="prefetch" href="/kenny/assets/js/8.35381a76.js"><link rel="prefetch" href="/kenny/assets/js/9.48340c58.js">
+    <link rel="stylesheet" href="/kenny/assets/css/0.styles.822e6fbd.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/kenny/" class="home-link router-link-active"><!----> <span class="site-name">Kenny's Lab</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/kenny/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/kenny/aws server/" class="nav-link">
+  AWS Server
+</a></div><div class="nav-item"><a href="/kenny/linuxserver/NetworkManager.html" class="nav-link">
+  Linux Server
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="AWS Certification" class="dropdown-title"><span class="title">AWS Certification</span> <span class="arrow down"></span></button> <button type="button" aria-label="AWS Certification" class="mobile-dropdown-title"><span class="title">AWS Certification</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/kenny/aws certification/ACP/" class="nav-link">
+  AWS Cloud Practitioner
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/aws certification/SAA/" class="nav-link">
+  AWS Solutions Architect Associate
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="English" class="dropdown-title"><span class="title">English</span> <span class="arrow down"></span></button> <button type="button" aria-label="English" class="mobile-dropdown-title"><span class="title">English</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/kenny/english/hitutor/" class="nav-link">
+  hitutor
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/english/phrase/" class="nav-link">
+  phrase
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/english/nytimes.html" class="nav-link">
+  NY Times
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/english/scmp/" class="nav-link">
+  South Morning China Post
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/english/StraitsTimes.html" class="nav-link">
+  Straits Times
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/kenny/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/kenny/aws server/" class="nav-link">
+  AWS Server
+</a></div><div class="nav-item"><a href="/kenny/linuxserver/NetworkManager.html" class="nav-link">
+  Linux Server
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="AWS Certification" class="dropdown-title"><span class="title">AWS Certification</span> <span class="arrow down"></span></button> <button type="button" aria-label="AWS Certification" class="mobile-dropdown-title"><span class="title">AWS Certification</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/kenny/aws certification/ACP/" class="nav-link">
+  AWS Cloud Practitioner
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/aws certification/SAA/" class="nav-link">
+  AWS Solutions Architect Associate
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="English" class="dropdown-title"><span class="title">English</span> <span class="arrow down"></span></button> <button type="button" aria-label="English" class="mobile-dropdown-title"><span class="title">English</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/kenny/english/hitutor/" class="nav-link">
+  hitutor
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/english/phrase/" class="nav-link">
+  phrase
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/english/nytimes.html" class="nav-link">
+  NY Times
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/english/scmp/" class="nav-link">
+  South Morning China Post
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/english/StraitsTimes.html" class="nav-link">
+  Straits Times
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/kenny/linuxserver/NetworkManager.html" class="sidebar-link">Network Manager</a></li><li><a href="/kenny/linuxserver/firewalld.html" class="sidebar-link">Firewalld</a></li><li><a href="/kenny/linuxserver/sftp.html" aria-current="page" class="active sidebar-link">SFTP without SSH</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/kenny/linuxserver/sftp.html#建立帳號" class="sidebar-link">建立帳號</a></li><li class="sidebar-sub-header"><a href="/kenny/linuxserver/sftp.html#設定-sftp-連線" class="sidebar-link">設定 SFTP 連線</a></li><li class="sidebar-sub-header"><a href="/kenny/linuxserver/sftp.html#連線測試" class="sidebar-link">連線測試</a></li><li class="sidebar-sub-header"><a href="/kenny/linuxserver/sftp.html#設定-sftp-log" class="sidebar-link">設定 SFTP log</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="sftp-without-ssh"><a href="#sftp-without-ssh" class="header-anchor">#</a> SFTP without SSH</h1> <p>目標：</p> <ul><li>開啟 sftp 服務連線</li> <li>不允許 ssh 連線</li> <li>chroot 在各資料夾內</li></ul> <h2 id="建立帳號"><a href="#建立帳號" class="header-anchor">#</a> 建立帳號</h2> <ol><li>先建立 sftp 群組 <code>sftpgroup</code></li></ol> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">groupadd</span> sftpgroup
+</code></pre></div><ol start="2"><li>建立一個 <code>sftpuser1</code> 範例帳號</li></ol> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">useradd</span> -G sftpgroup -s /sbin/nologin sftpuser1
+</code></pre></div><ol start="3"><li>設定登入密碼</li></ol> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">passwd</span> sftpuser1
+</code></pre></div><h2 id="設定-sftp-連線"><a href="#設定-sftp-連線" class="header-anchor">#</a> 設定 SFTP 連線</h2> <ol><li>編輯 <code>/etc/ssh/sshd_config</code> 這個 <code>sshd</code> 伺服器設定檔，找到下面 <code>Subsystem</code> 的設定</li></ol> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">vim</span> /etc/ssh/sshd_config
+</code></pre></div><p>改寫成以下設定</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment">#Subsystem       sftp    /usr/libexec/openssh/sftp-server  #註解掉此行改寫如下</span>
+Subsystem       <span class="token function">sftp</span>    internal-sftp
+<span class="token comment">#Match User sftpuser1    # 比對帳號</span>
+Match Group sftpgroup
+        ChrootDirectory /home/%u     
+        PasswordAuthentication <span class="token function">yes</span>
+		X11Forwarding no
+        AllowTcpForwarding no
+        ForceCommand internal-sftp
+</code></pre></div><ul><li>若只用 key 認證，則參數設定為：<code>PasswordAuthentication no</code></li> <li>ChrootDirectory：設定該群組根目錄，%u 代表使用者帳號</li> <li>設定 Chroot 根目錄擁有者與權限：由於 <code>chroot</code> 的特殊限制，這個要 <code>chroot</code> 目錄的擁有者必須為 <code>root</code>，而且該目錄的權限也必須設定為唯讀 755 才行</li></ul> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">chown</span> root:root /home/sftpuser1
+<span class="token function">chmod</span> <span class="token number">755</span> /home/sftpuser1
+</code></pre></div><ol start="4"><li>先確認剛剛的設定有沒有問題，若沒問題再重啟 sshd 服務：</li></ol> <div class="language-sh extra-class"><pre class="language-sh"><code>sshd -t <span class="token operator">&amp;&amp;</span> <span class="token function">service</span> sshd restart
+</code></pre></div><h2 id="連線測試"><a href="#連線測試" class="header-anchor">#</a> 連線測試</h2> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">sftp</span> sftpuser1@<span class="token punctuation">{</span>server_ip<span class="token punctuation">}</span>
+</code></pre></div><ul><li>如果出現登入錯誤</li></ul> <div class="language-sh extra-class"><pre class="language-sh"><code>sftp<span class="token operator">&gt;</span> <span class="token function">ls</span>
+remote readdir<span class="token punctuation">(</span><span class="token string">&quot;/&quot;</span><span class="token punctuation">)</span>: Permission denied
+</code></pre></div><p>可能是 <code>SELinux</code> 造成，嘗試下列指令後重新測試看看</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment"># -P 是將設定寫到設定檔中，可以測試確定問題後再以 -P 重下一次指令。</span>
+setsebool <span class="token punctuation">[</span>-P<span class="token punctuation">]</span> ssh_chroot_full_access on
+restorecon -R /sftp/sftpuser1
+
+<span class="token comment"># 若是 chroot 是指向使用者家目錄，可改下列指令。</span>
+setsebool <span class="token punctuation">[</span>-P<span class="token punctuation">]</span> ssh_chroot_rw_homedirs on
+</code></pre></div><h2 id="設定-sftp-log"><a href="#設定-sftp-log" class="header-anchor">#</a> 設定 SFTP log</h2> <p>若要記錄 sftp log，將 <code>ForceCommand</code> 修改如下</p> <div class="language- extra-class"><pre class="language-text"><code>ForceCommand internal-sftp -l INFO
+</code></pre></div><p>修改之後重啟 <code>sshd</code> 服務</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">service</span> sshd restart
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/kenny/linuxserver/firewalld.html" class="prev">
+        Firewalld
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/kenny/assets/js/app.9eb3588d.js" defer></script><script src="/kenny/assets/js/2.bff8ff76.js" defer></script><script src="/kenny/assets/js/20.7a380b31.js" defer></script>
+  </body>
+</html>

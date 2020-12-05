@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Firewalld | Kenny&#39;s Lab</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    
+    <meta name="description" content="Lab memo">
+    
+    <link rel="preload" href="/kenny/assets/css/0.styles.822e6fbd.css" as="style"><link rel="preload" href="/kenny/assets/js/app.9eb3588d.js" as="script"><link rel="preload" href="/kenny/assets/js/2.bff8ff76.js" as="script"><link rel="preload" href="/kenny/assets/js/19.aad2254b.js" as="script"><link rel="prefetch" href="/kenny/assets/js/10.a9479bb9.js"><link rel="prefetch" href="/kenny/assets/js/11.69b3f43e.js"><link rel="prefetch" href="/kenny/assets/js/12.32e826cb.js"><link rel="prefetch" href="/kenny/assets/js/13.8da7b687.js"><link rel="prefetch" href="/kenny/assets/js/14.febb013f.js"><link rel="prefetch" href="/kenny/assets/js/15.fd3cf968.js"><link rel="prefetch" href="/kenny/assets/js/16.c8b69222.js"><link rel="prefetch" href="/kenny/assets/js/17.6210fc4b.js"><link rel="prefetch" href="/kenny/assets/js/18.7acf72c9.js"><link rel="prefetch" href="/kenny/assets/js/20.7a380b31.js"><link rel="prefetch" href="/kenny/assets/js/3.03d08e27.js"><link rel="prefetch" href="/kenny/assets/js/4.a2a0e85d.js"><link rel="prefetch" href="/kenny/assets/js/5.d8d21a59.js"><link rel="prefetch" href="/kenny/assets/js/6.dae1d669.js"><link rel="prefetch" href="/kenny/assets/js/7.ca37f3f3.js"><link rel="prefetch" href="/kenny/assets/js/8.35381a76.js"><link rel="prefetch" href="/kenny/assets/js/9.48340c58.js">
+    <link rel="stylesheet" href="/kenny/assets/css/0.styles.822e6fbd.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/kenny/" class="home-link router-link-active"><!----> <span class="site-name">Kenny's Lab</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/kenny/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/kenny/aws server/" class="nav-link">
+  AWS Server
+</a></div><div class="nav-item"><a href="/kenny/linuxserver/NetworkManager.html" class="nav-link">
+  Linux Server
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="AWS Certification" class="dropdown-title"><span class="title">AWS Certification</span> <span class="arrow down"></span></button> <button type="button" aria-label="AWS Certification" class="mobile-dropdown-title"><span class="title">AWS Certification</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/kenny/aws certification/ACP/" class="nav-link">
+  AWS Cloud Practitioner
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/aws certification/SAA/" class="nav-link">
+  AWS Solutions Architect Associate
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="English" class="dropdown-title"><span class="title">English</span> <span class="arrow down"></span></button> <button type="button" aria-label="English" class="mobile-dropdown-title"><span class="title">English</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/kenny/english/hitutor/" class="nav-link">
+  hitutor
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/english/phrase/" class="nav-link">
+  phrase
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/english/nytimes.html" class="nav-link">
+  NY Times
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/english/scmp/" class="nav-link">
+  South Morning China Post
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/english/StraitsTimes.html" class="nav-link">
+  Straits Times
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/kenny/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/kenny/aws server/" class="nav-link">
+  AWS Server
+</a></div><div class="nav-item"><a href="/kenny/linuxserver/NetworkManager.html" class="nav-link">
+  Linux Server
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="AWS Certification" class="dropdown-title"><span class="title">AWS Certification</span> <span class="arrow down"></span></button> <button type="button" aria-label="AWS Certification" class="mobile-dropdown-title"><span class="title">AWS Certification</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/kenny/aws certification/ACP/" class="nav-link">
+  AWS Cloud Practitioner
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/aws certification/SAA/" class="nav-link">
+  AWS Solutions Architect Associate
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="English" class="dropdown-title"><span class="title">English</span> <span class="arrow down"></span></button> <button type="button" aria-label="English" class="mobile-dropdown-title"><span class="title">English</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/kenny/english/hitutor/" class="nav-link">
+  hitutor
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/english/phrase/" class="nav-link">
+  phrase
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/english/nytimes.html" class="nav-link">
+  NY Times
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/english/scmp/" class="nav-link">
+  South Morning China Post
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/english/StraitsTimes.html" class="nav-link">
+  Straits Times
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/kenny/linuxserver/NetworkManager.html" class="sidebar-link">Network Manager</a></li><li><a href="/kenny/linuxserver/firewalld.html" aria-current="page" class="active sidebar-link">Firewalld</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/kenny/linuxserver/firewalld.html#安裝-firewalld" class="sidebar-link">安裝 firewalld</a></li><li class="sidebar-sub-header"><a href="/kenny/linuxserver/firewalld.html#查詢" class="sidebar-link">查詢</a></li><li class="sidebar-sub-header"><a href="/kenny/linuxserver/firewalld.html#開啟連接埠" class="sidebar-link">開啟連接埠</a></li><li class="sidebar-sub-header"><a href="/kenny/linuxserver/firewalld.html#連接埠轉發" class="sidebar-link">連接埠轉發</a></li><li class="sidebar-sub-header"><a href="/kenny/linuxserver/firewalld.html#rich-rules" class="sidebar-link">Rich rules</a></li></ul></li><li><a href="/kenny/linuxserver/sftp.html" class="sidebar-link">SFTP without SSH</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="firewalld"><a href="#firewalld" class="header-anchor">#</a> Firewalld</h1> <h2 id="安裝-firewalld"><a href="#安裝-firewalld" class="header-anchor">#</a> 安裝 firewalld</h2> <ul><li>請先確認 iptables 是否有被啟用，若系統上原本就有運行 iptables 的防火牆，一定要先將其關閉後，才能啟用 firewalld</li></ul> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment"># 檢查 iptables 服務是否正在運行</span>
+systemctl status iptables
+
+<span class="token comment"># 停止正在執行的 iptables 服務</span>
+systemctl stop iptables
+
+<span class="token comment"># 將 iptables 服務永久關閉</span>
+systemctl mask iptables
+</code></pre></div><ul><li>firewalld 在 RHEL/CentOS 7、8，應該是預設就會安裝好的，若您的系統上沒有安裝，可用 yum 安裝</li></ul> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment"># 檢查 firewalld 服務狀態</span>
+systemctl status firewalld
+
+<span class="token comment"># 啟動 firewalld 服務</span>
+systemctl start firewalld
+
+<span class="token comment"># 停止 firewalld 服務</span>
+systemctl stop firewalld
+
+<span class="token comment"># 重新啟動 firewalld 服務</span>
+systemctl restart firewalld
+
+<span class="token comment">#重新載入防火牆設定</span>
+firewall-cmd --reload
+</code></pre></div><h2 id="查詢"><a href="#查詢" class="header-anchor">#</a> 查詢</h2> <ul><li>查詢預設區域</li></ul> <div class="language-sh extra-class"><pre class="language-sh"><code>firewall-cmd --get-default-zone
+</code></pre></div><ul><li>查看 <code>firewalld</code> 有支援的服務</li></ul> <div class="language-sh extra-class"><pre class="language-sh"><code>firewall-cmd --get-services
+</code></pre></div><ul><li>查看目前區域中有開 Port 的服務</li></ul> <div class="language-sh extra-class"><pre class="language-sh"><code>firewall-cmd --list-services
+</code></pre></div><ul><li>列出詳細設定</li></ul> <div class="language-sh extra-class"><pre class="language-sh"><code>firewall-cmd  --list-all
+</code></pre></div><h2 id="開啟連接埠"><a href="#開啟連接埠" class="header-anchor">#</a> 開啟連接埠</h2> <ul><li><code>-zone</code>：指定區域</li> <li><code>-add-port</code>：加入欲開啟的連接埠，並指定通訊協定</li> <li><code>–remove-port</code>：移除開啟的連接埠，並指定通訊協定</li> <li><code>–permanent</code>：重開系統就會永久生效</li></ul> <div class="language-sh extra-class"><pre class="language-sh"><code>firewall-cmd --zone<span class="token operator">=</span>public --add-port<span class="token operator">=</span><span class="token number">6666</span>/tcp --permanent
+
+firewall-cmd --zone<span class="token operator">=</span>public --remove-port<span class="token operator">=</span><span class="token number">6666</span>/tcp --permanent
+
+<span class="token comment">#一次開啟多個</span>
+firewall-cmd --zone<span class="token operator">=</span>public --add-port<span class="token operator">=</span><span class="token number">6666</span>-6670/tcp
+</code></pre></div><ul><li><code>–add-service</code>：透過服務名稱開放</li> <li><code>-remove-service</code>：透過服務名稱移除</li></ul> <div class="language-sh extra-class"><pre class="language-sh"><code>firewall-cmd --zone<span class="token operator">=</span>public --add-service<span class="token operator">=</span>mysql --permanent
+
+firewall-cmd --zone<span class="token operator">=</span>public --remove-service<span class="token operator">=</span>mysql --permanent
+</code></pre></div><h2 id="連接埠轉發"><a href="#連接埠轉發" class="header-anchor">#</a> 連接埠轉發</h2> <ul><li><code>–add-forward-port</code>：將來自連接埠 A 的資料轉發</li> <li><code>toport</code>：轉發至本機其他指定 port</li></ul> <div class="language-sh extra-class"><pre class="language-sh"><code>firewall-cmd --zone<span class="token operator">=</span>public --add-forward-port<span class="token operator">=</span>port<span class="token operator">=</span><span class="token number">22</span>:proto<span class="token operator">=</span>tcp:toport<span class="token operator">=</span><span class="token number">2233</span>
+</code></pre></div><ul><li><code>toaddr</code>：資訊轉發到其他位址的相同連接埠</li></ul> <div class="language-sh extra-class"><pre class="language-sh"><code>firewall-cmd --zone<span class="token operator">=</span>public --add-forward-port<span class="token operator">=</span>port<span class="token operator">=</span><span class="token number">22</span>:proto<span class="token operator">=</span>tcp:toaddr<span class="token operator">=</span><span class="token number">192.168</span>.10.1
+</code></pre></div><ul><li><code>-add-masquerade</code>：連接埠轉發如果是不同主機，就要啟用區域的偽裝功能，將私有網路的地址將隱藏並映射到一個公有 IP</li> <li><code>–remove-masquerade</code>：移除偽裝功能</li></ul> <div class="language-sh extra-class"><pre class="language-sh"><code>firewall-cmd --zone<span class="token operator">=</span>public --add-masquerade
+</code></pre></div><h2 id="rich-rules"><a href="#rich-rules" class="header-anchor">#</a> Rich rules</h2> <ul><li><code>–add-rich-rule</code>：新增</li> <li><code>–remove-rich-rule</code>：移除</li> <li>IP白名單：允IP存取</li></ul> <div class="language-sh extra-class"><pre class="language-sh"><code>firewall-cmd --zone<span class="token operator">=</span>public --add-rich-rule <span class="token string">'rule family=&quot;ipv4&quot; source address=192.168.10.10 accept'</span>
+<span class="token comment">#執行結果</span>
+rule <span class="token assign-left variable">family</span><span class="token operator">=</span><span class="token string">&quot;ipv4&quot;</span> <span class="token builtin class-name">source</span> <span class="token assign-left variable">address</span><span class="token operator">=</span><span class="token string">&quot;192.168.10.1&quot;</span> accept
+</code></pre></div><ul><li>IP黑名單：拒絕IP存取</li></ul> <div class="language-sh extra-class"><pre class="language-sh"><code>firewall-cmd --zone<span class="token operator">=</span>public --add-rich-rule <span class="token string">'rule family=&quot;ipv4&quot; source address=&quot;192.168.10.10&quot; port port=22 protocol=tcp reject'</span>
+<span class="token comment">#執行結果</span>
+rule <span class="token assign-left variable">family</span><span class="token operator">=</span><span class="token string">&quot;ipv4&quot;</span> <span class="token builtin class-name">source</span> <span class="token assign-left variable">address</span><span class="token operator">=</span><span class="token string">&quot;192.168.10.10&quot;</span> reject
+</code></pre></div><ul><li>也可以利用rich rules來設定連接埠轉發，如果轉發至不同主機的話，masquerade要開啟</li></ul> <div class="language-sh extra-class"><pre class="language-sh"><code>firewall-cmd --zone<span class="token operator">=</span>public --add-rich-rule <span class="token string">'rule family=ipv4 source address=192.168.10.1 forward-port port=80 protocol=tcp to-port=8080'</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/kenny/linuxserver/NetworkManager.html" class="prev">
+        Network Manager
+      </a></span> <span class="next"><a href="/kenny/linuxserver/sftp.html">
+        SFTP without SSH
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/kenny/assets/js/app.9eb3588d.js" defer></script><script src="/kenny/assets/js/2.bff8ff76.js" defer></script><script src="/kenny/assets/js/19.aad2254b.js" defer></script>
+  </body>
+</html>
