@@ -59,6 +59,7 @@ module.exports = {
       "NetworkManager",
       "firewalld",
       "sftp",
+      "httpd2tomcat",
     ]
       
 
