@@ -69,7 +69,11 @@ SSL 資安設定
 ```sh
 vi ${SSL}ssl.conf
 ```
-
+```sh
+SSLProtocol all -SSLv2 -SSLv3 -TLSv1 -TLSv1.1
+SSLCipherSuite ALL:!aNULL:!ADH:!eNULL:!LOW:!EXP:!NULL:!RC4:!RC2:!DES:!3DES:!SHA:!SHA256:!SHA384:!MD5+HIGH:+MEDIUM
+#由於之前編碼已被判定為弱點，因此接受弱掃建議採用以上編碼
+```
 ```sh
 sed -i '/SSLProtocol/s/.*/SSLProtocol all -SSLv2 -SSLv3 -TLSv1 -TLSv1.1/' ${SSL}ssl.conf
 sed -i '/SSLProxyProtocol/s/.*/SSLProxyProtocol all -SSLv2 -SSLv3 -TLSv1 -TLSv1.1/' ${SSL}ssl.conf
@@ -89,6 +93,7 @@ ProxyPass / ajp://localhost:8009/
 ProxyPassReverse / ajp://localhost:8009/
 ```
 or
+
 ```sh
 sed -i '/<\/VirtualHost>/s/^/ProxyPass \/ ajp:\/\/localhost:8009\/\nProxyPassReverse \/ ajp:\/\/localhost:8009\/\n\n/' ${SSL}ssl.conf
 ```

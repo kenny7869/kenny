@@ -39,3 +39,27 @@ He was **eliminated** in the third round of the competition.
 having the necessary qualities or satisfying the necessary conditions
 
 Only people over 20 are **eligible** to vote.
+
+#### embark
+>verb <br>
+to go onto a ship
+
+We embarked at Liverpool for New York.
+
+#### unprecedented
+>adjective <br>
+never having happened or existed in the past
+
+The rate of growth was **unprecedented**.
+
+#### juncture
+>noun <br>
+a particular point in time
+
+At this **juncture**, it is impossible to say whether she will make a full recovery.
+
+#### tackle
+>verb <br>
+to try to deal with something or someone
+
+There are many ways of **tackling** this problem.

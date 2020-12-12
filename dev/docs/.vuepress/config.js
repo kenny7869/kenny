@@ -1,4 +1,10 @@
 module.exports = {
+  markdown: {
+    extendMarkdown: md => {
+      md.set({ breaks: true })
+      md.use(require('markdown-it-task-lists'))
+    }
+  },
   title: "Kenny's Lab",
   description:
     "Lab memo" /* a <meta> tag in the page HTML */,
@@ -36,7 +42,8 @@ module.exports = {
       
       "/aws server/" : [
         "",
-        "awshttpd2tomcat"  
+        "awshttpd2tomcat",
+        "IAM",  
         ],
         
       "/aws certification/": [
@@ -60,7 +67,8 @@ module.exports = {
       "firewalld",
       "sftp",
       "httpd2tomcat",
-    ]
+      "pgsql",
+    ],
       
 
     
