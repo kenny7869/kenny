@@ -83,3 +83,13 @@ nmcli connection reload
 # or
 systemctl restart NetworkManager
 ```
+
+- DNS 進入 `/etc/resolv.conf ` 進行修改
+
+```sh
+vim /etc/resolv.conf
+
+nameserver 10.160.1.9
+nameserver 10.160.128.9
+```
+

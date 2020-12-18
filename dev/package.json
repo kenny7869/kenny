@@ -1,7 +1,8 @@
 {
   "devDependencies": {
     "markdown-it-task-lists": "^2.1.1",
-    "vuepress": "^1.7.1"
+    "vuepress": "^1.7.1",
+    "vuepress-plugin-one-click-copy": "^1.0.2"
   },
   "scripts": {
     "docs:dev": "vuepress dev docs",

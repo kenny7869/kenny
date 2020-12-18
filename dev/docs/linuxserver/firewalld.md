@@ -132,3 +132,23 @@ rule family="ipv4" source address="192.168.10.10" reject
 ```sh
 firewall-cmd --zone=public --add-rich-rule 'rule family=ipv4 source address=192.168.10.1 forward-port port=80 protocol=tcp to-port=8080'
 ```
+
+- 接受特定 IP any port 都可連入，大部分用來主機弱點掃描，zone 選擇為 trusted
+
+```sh
+firewall-cmd --zone=trusted --add-source="192.168.1.1/32" --permanent
+```
+
+## 關於zone的說明
+
+| Zone            | Dedfault configuration                   |   
+|-----------------|----------------------------------------------------------------------------------------------------------------------------------|
+| trusted         | 完全信任的區域，接受所有連線                                                                                                        |  
+| public          | 公開區域，預設不信任其他電腦與網路，只有被允許的連線才能進入。通常大部分的連線設定都會放在這裡                                            |  
+| external        | 公開區域，適用於 NAT 網路環境                                                                                                       | 
+| internal        | 內部網路區域，在此區域中不應該會有惡意的攻擊者。只有被允許的連線可以進入                                                                | 
+| dmz             | 非軍事區域（demilitarized zone，有點像是放在外頭的危險區域），允許外部的連線進入，但其對內的連線則有限制，只有被允許的連線才能連進內部網路   |
+| work            | 公司內部等工作區域，在此區域中不應該會有惡意的攻擊者。只有被允許的連線可以進入                                                           |   
+| home            | 家裡頭的網路區域，在此區域中不應該會有惡意的攻擊者。只有被允許的連線可以進入                                                             | 
+| block           | 任何來自於外部的連線都會被阻擋，只允許自己系統主動建立的連線                                                                           | 
+| drop            | 任何往內的封包都會被丟棄，只允許往外傳送的封包                                                                                         | 

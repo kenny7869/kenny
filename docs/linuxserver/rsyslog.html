@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>rsyslog 介紹與使用 | Kenny&#39;s Lab</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    
+    <meta name="description" content="Lab memo">
+    
+    <link rel="preload" href="/kenny/assets/css/0.styles.94118319.css" as="style"><link rel="preload" href="/kenny/assets/js/app.f80db6d4.js" as="script"><link rel="preload" href="/kenny/assets/js/2.3fb14c61.js" as="script"><link rel="preload" href="/kenny/assets/js/8.ca446059.js" as="script"><link rel="prefetch" href="/kenny/assets/js/10.91fc2e71.js"><link rel="prefetch" href="/kenny/assets/js/11.25b4abd1.js"><link rel="prefetch" href="/kenny/assets/js/12.f7c4c654.js"><link rel="prefetch" href="/kenny/assets/js/13.22e24e51.js"><link rel="prefetch" href="/kenny/assets/js/14.f0f9082e.js"><link rel="prefetch" href="/kenny/assets/js/15.df25c610.js"><link rel="prefetch" href="/kenny/assets/js/16.464627c4.js"><link rel="prefetch" href="/kenny/assets/js/17.bd0b59de.js"><link rel="prefetch" href="/kenny/assets/js/18.9f2abbcb.js"><link rel="prefetch" href="/kenny/assets/js/19.61b27bb6.js"><link rel="prefetch" href="/kenny/assets/js/20.f8530f24.js"><link rel="prefetch" href="/kenny/assets/js/21.a1c5af63.js"><link rel="prefetch" href="/kenny/assets/js/22.5395e369.js"><link rel="prefetch" href="/kenny/assets/js/23.d2f68376.js"><link rel="prefetch" href="/kenny/assets/js/24.9e88cfec.js"><link rel="prefetch" href="/kenny/assets/js/25.2e743256.js"><link rel="prefetch" href="/kenny/assets/js/26.ccfa8148.js"><link rel="prefetch" href="/kenny/assets/js/3.c0d38cc5.js"><link rel="prefetch" href="/kenny/assets/js/4.4cac850f.js"><link rel="prefetch" href="/kenny/assets/js/5.400e9e31.js"><link rel="prefetch" href="/kenny/assets/js/6.26e35d4d.js"><link rel="prefetch" href="/kenny/assets/js/7.7ba8582f.js"><link rel="prefetch" href="/kenny/assets/js/9.afa90884.js">
+    <link rel="stylesheet" href="/kenny/assets/css/0.styles.94118319.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/kenny/" class="home-link router-link-active"><!----> <span class="site-name">Kenny's Lab</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/kenny/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/kenny/aws server/" class="nav-link">
+  AWS Server
+</a></div><div class="nav-item"><a href="/kenny/linuxserver/NetworkManager.html" class="nav-link">
+  Linux Server
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="AWS Certification" class="dropdown-title"><span class="title">AWS Certification</span> <span class="arrow down"></span></button> <button type="button" aria-label="AWS Certification" class="mobile-dropdown-title"><span class="title">AWS Certification</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/kenny/aws certification/ACP/" class="nav-link">
+  AWS Cloud Practitioner
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/aws certification/SAA/" class="nav-link">
+  AWS Solutions Architect Associate
+</a></li></ul></div></div><div class="nav-item"><a href="/kenny/Network Associate/VLAN.html" class="nav-link">
+  Network Associate
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="English" class="dropdown-title"><span class="title">English</span> <span class="arrow down"></span></button> <button type="button" aria-label="English" class="mobile-dropdown-title"><span class="title">English</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/kenny/english/hitutor/" class="nav-link">
+  hitutor
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/english/phrase/" class="nav-link">
+  phrase
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/english/nytimes.html" class="nav-link">
+  NY Times
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/english/scmp/" class="nav-link">
+  South Morning China Post
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/english/StraitsTimes.html" class="nav-link">
+  Straits Times
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/kenny/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/kenny/aws server/" class="nav-link">
+  AWS Server
+</a></div><div class="nav-item"><a href="/kenny/linuxserver/NetworkManager.html" class="nav-link">
+  Linux Server
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="AWS Certification" class="dropdown-title"><span class="title">AWS Certification</span> <span class="arrow down"></span></button> <button type="button" aria-label="AWS Certification" class="mobile-dropdown-title"><span class="title">AWS Certification</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/kenny/aws certification/ACP/" class="nav-link">
+  AWS Cloud Practitioner
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/aws certification/SAA/" class="nav-link">
+  AWS Solutions Architect Associate
+</a></li></ul></div></div><div class="nav-item"><a href="/kenny/Network Associate/VLAN.html" class="nav-link">
+  Network Associate
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="English" class="dropdown-title"><span class="title">English</span> <span class="arrow down"></span></button> <button type="button" aria-label="English" class="mobile-dropdown-title"><span class="title">English</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/kenny/english/hitutor/" class="nav-link">
+  hitutor
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/english/phrase/" class="nav-link">
+  phrase
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/english/nytimes.html" class="nav-link">
+  NY Times
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/english/scmp/" class="nav-link">
+  South Morning China Post
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/english/StraitsTimes.html" class="nav-link">
+  Straits Times
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/kenny/linuxserver/NetworkManager.html" class="sidebar-link">Network Manager</a></li><li><a href="/kenny/linuxserver/Route Table.html" class="sidebar-link">Route Table</a></li><li><a href="/kenny/linuxserver/firewalld.html" class="sidebar-link">Firewalld</a></li><li><a href="/kenny/linuxserver/sftp.html" class="sidebar-link">SFTP without SSH</a></li><li><a href="/kenny/linuxserver/httpd2tomcat.html" class="sidebar-link">HTTPD/TOMCAT</a></li><li><a href="/kenny/linuxserver/rsyslog.html" aria-current="page" class="active sidebar-link">rsyslog 介紹與使用</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/kenny/linuxserver/rsyslog.html#介紹" class="sidebar-link">介紹</a></li><li class="sidebar-sub-header"><a href="/kenny/linuxserver/rsyslog.html#配置" class="sidebar-link">配置</a></li><li class="sidebar-sub-header"><a href="/kenny/linuxserver/rsyslog.html#rsyslog-conf檔案詳解" class="sidebar-link">rsyslog.conf檔案詳解</a></li></ul></li><li><a href="/kenny/linuxserver/pgsql.html" class="sidebar-link">PostgreSQL 安裝與配置</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="rsyslog-介紹與使用"><a href="#rsyslog-介紹與使用" class="header-anchor">#</a> rsyslog 介紹與使用</h1> <h2 id="介紹"><a href="#介紹" class="header-anchor">#</a> 介紹</h2> <p>在 Cent OS 中，日誌是使用 rsyslogd 進行管理的，是之前版本的系統中 syslogd 的升級版，對原有的日誌系統進行了功能的擴展，提供了諸如過濾器，日誌加密保護，各種配置選項，輸入輸出模塊，支持通過 TCP 或者 UDP 協議進行傳輸等</p> <h2 id="配置"><a href="#配置" class="header-anchor">#</a> 配置</h2> <p>Rsyslog 的主要配置文件為 <code>/etc/rsyslog.conf</code> 文件，這個檔案規定了</p> <ol><li><p>什麼服務</p> <ul><li>Linux 核心的 syslog 認識的服務類型主要有底下這些<br> <img src="/kenny/assets/img/rsys-1.65a419a7.jpg" alt="rsys-1" title="rsys-1"></li></ul></li> <li><p>什麼等級訊息</p> <ul><li><p>Linux 核心的 syslog 將訊息分為七個主要的等級，根據 syslog.h 的定義，訊息名稱與數值的對應如下：<br> <img src="/kenny/assets/img/rsys-2.27c5a7fd.jpg" alt="rsys-2" title="rsys-2"></p></li> <li><p><strong>註：在訊息等級之前還有 .[=!] 的連結符號，代表的意思如下：</strong></p> <ul><li><code>.</code>：代表『比後面還要嚴重的等級 (含該等級) 都被記錄下來』的意思，例如： mail.info 代表只要是 mail 的資訊，而且該資訊等級嚴重於 info (含 info 本身)時，就會被記錄下來的意思</li> <li><code>.=</code>：代表所需要的等級就是後面接的等級而已， 其他的不要</li> <li><code>.!</code>：代表忽略大於等於這個等級的訊息，亦即低於這個等級的才會被紀錄的意思</li></ul></li></ul></li> <li><p>需要被記錄在哪裡(裝置或檔案)，底下就是一些常見的放置處：</p> <ul><li>檔案的絕對路徑：通常就是放在 <code>/var/log</code> 裡頭的檔案</li> <li>印表機或其他：例如 <code>/dev/lp0</code> 這個印表機裝置</li> <li>使用者名稱：顯示給使用者</li> <li>遠端主機：例如 @study.vbird.tsai</li> <li><code>*</code>：代表『目前在線上的所有人』<br>
+設定的語法如下：</li></ul></li></ol> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment"># 底下以 mail 這個服務產生的 info 等級為例：</span>
+mail.info			/var/log/maillog_info
+<span class="token comment"># 這一行說明：mail 服務產生的大於等於 info 等級的訊息，都記錄到 </span>
+<span class="token comment"># /var/log/maillog_info 檔案中的意思。</span>
+</code></pre></div><h2 id="rsyslog-conf檔案詳解"><a href="#rsyslog-conf檔案詳解" class="header-anchor">#</a> rsyslog.conf檔案詳解</h2> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment"># rsyslog configuration file</span>
+
+<span class="token comment">#### MODULES ####</span>
+<span class="token comment">#載入模組列表</span>
+
+<span class="token comment"># The imjournal module bellow is now used as a message source instead of imuxsock.</span>
+<span class="token variable">$ModLoad</span> imuxsock <span class="token comment"># provides support for local system logging (e.g. via logger command)</span>
+提供對本地系統日誌的支援
+<span class="token variable">$ModLoad</span> imjournal <span class="token comment"># provides access to the systemd journal</span>
+提供對systemd日誌的訪問
+<span class="token comment">#$ModLoad imklog # reads kernel messages (the same are read from journald)</span>
+讀取核心訊息
+<span class="token comment">#$ModLoad immark  # provides --MARK-- message capability</span>
+提供--MARK--訊息功能
+
+<span class="token comment"># Provides UDP syslog reception</span>
+<span class="token comment">#$ModLoad imudp</span>
+<span class="token comment">#$UDPServerRun 514  允許514埠接收使用UDP協議轉發過來的日誌</span>
+
+<span class="token comment"># Provides TCP syslog reception</span>
+<span class="token comment">#$ModLoad imtcp</span>
+<span class="token comment">#$InputTCPServerRun 514允許514埠接收使用TCP協議轉發過來的日誌</span>
+</code></pre></div><div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment">#### GLOBAL DIRECTIVES ####</span>
+<span class="token comment">#全域性指令，</span>
+<span class="token comment"># Where to place auxiliary files</span>
+<span class="token variable">$WorkDirectory</span> /var/lib/rsyslog
+
+<span class="token comment"># Use default timestamp format  定義日誌格式預設模板 </span>
+<span class="token variable">$ActionFileDefaultTemplate</span> RSYSLOG_TraditionalFileFormat
+
+<span class="token comment"># File syncing capability is disabled by default. This feature is usually not required,</span>
+<span class="token comment"># not useful and an extreme performance hit</span>
+<span class="token comment">#$ActionFileEnableSync on</span>
+
+<span class="token comment"># Include all config files in /etc/rsyslog.d/</span>
+<span class="token variable">$IncludeConfig</span> /etc/rsyslog.d/*.conf
+
+<span class="token comment"># Turn off message reception via local log socket;</span>
+<span class="token comment"># local messages are retrieved through imjournal now.</span>
+<span class="token variable">$OmitLocalLogging</span> on
+
+<span class="token comment"># File to store the position in the journal</span>
+<span class="token variable">$IMJournalStateFile</span> imjournal.state
+</code></pre></div><div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment">#### RULES ####</span>
+<span class="token comment">#規則</span>
+<span class="token comment"># Log all kernel messages to the console.</span>
+<span class="token comment"># Logging much else clutters up the screen.</span>
+<span class="token comment">#kern.*                                                 /dev/console</span>
+關於核心的所有日誌都放到/dev/console<span class="token punctuation">(</span>控制檯<span class="token punctuation">)</span>
+
+<span class="token comment"># Log anything (except mail) of level info or higher.</span>
+<span class="token comment"># Don't log private authentication messages!</span>
+*.info<span class="token punctuation">;</span>mail.none<span class="token punctuation">;</span>authpriv.none<span class="token punctuation">;</span>cron.none                /var/log/messages
+記錄所有日誌型別的info級別以及大於info級別的資訊到/var/log/messages，但是mail郵件資訊，authpriv驗證方面的資訊和cron時間任務相關的資訊除外
+
+<span class="token comment"># The authpriv file has restricted access.</span>
+authpriv.*                                              /var/log/secure
+authpriv驗證相關的所有資訊存放在/var/log/secure
+
+<span class="token comment"># Log all the mail messages in one place.</span>
+mail.*                                                  -/var/log/maillog
+郵件的所有資訊存放在/var/log/maillog<span class="token punctuation">;</span> 這裡有一個-符號, 表示是使用非同步的方式記錄, 因為日誌一般會比較大
+
+<span class="token comment"># Log cron stuff</span>
+cron.*                                                  /var/log/cron
+計劃任務有關的資訊存放在/var/log/cron
+
+<span class="token comment"># Everybody gets emergency messages</span>
+*.emerg                                                 :omusrmsg:*
+ 記錄所有的大於等於emerg級別資訊, 以wall方式傳送給每個登入到系統的人
+
+<span class="token comment"># Save news errors of level crit and higher in a special file.</span>
+uucp,news.crit                                          /var/log/spooler
+記錄uucp,news.crit等存放在/var/log/spooler
+uucp  –unix to unix copy, unix主機之間相關的通訊，news   –新聞組
+
+<span class="token comment"># Save boot messages also to boot.log</span>
+local7.*                                                /var/log/boot.log
+啟動的相關資訊
+</code></pre></div><ul><li><p><code>#kern.*</code>：只要是核心產生的訊息，全部都送到 console(終端機) 去。console 通常是由外部裝置連接到系統而來， 舉例來說，很多封閉型主機 (沒有鍵盤、螢幕的系統) 可以透過連接 RS232 連接口將訊息傳輸到外部的系統中， 例如以筆記型電腦連接到封閉主機的 RS232 插口。這個項目通常應該是用在系統出現嚴重問題而無法使用預設的螢幕觀察系統時， 可以透過這個項目來連接取得核心的訊息</p></li> <li><p><code>.info;mail.none;authpriv.none;cron.none</code>：由於 mail, authpriv, cron 等類別產生的訊息較多， 且已經寫入底下的數個檔案中，因此在 /var/log/messages 裡面就不記錄這些項目。除此之外的其他訊息都寫入 /var/log/messages 中。這也是 messages 檔案很重要的緣故！</p></li> <li><p><code>authpriv.*</code>：認證方面的訊息均寫入 <code>/var/log/secure</code> 檔案</p></li> <li><p><code>authpriv.*</code>：認證方面的訊息均寫入 <code>/var/log/secure</code> 檔案</p></li> <li><p><code>cron.*</code>：例行性工作排程均寫入 <code>/var/log/cron</code> 檔案</p></li> <li><p><code>.emerg</code>：當產生最嚴重的錯誤等級時，將該等級的訊息以 wall 的方式廣播給所有在系統登入的帳號得知， 目的是讓使用者能夠趕緊通知系統管理員來處理嚴重的錯誤問題</p></li> <li><p><code>uucp,news.crit</code>：uucp 是早期 Unix-like 系統進行資料傳遞的通訊協定，後來常用在新聞群組的用途中。 news 則是新聞群組。當新聞群組方面的資訊有嚴重錯誤時就寫入 <code>/var/log/spooler</code> 檔案中</p></li> <li><p><code>local7.*</code>：將本機開機時應該顯示到螢幕的訊息寫入到 <code>/var/log/boot.log</code> 檔案中</p></li></ul> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment">#### begin forwarding rule ###</span>
+ 轉發規則
+<span class="token comment"># The statement between the begin ... end define a SINGLE forwarding</span>
+<span class="token comment"># rule. They belong together, do NOT split them. If you create multiple</span>
+<span class="token comment"># forwarding rules, duplicate the whole block!  </span>
+<span class="token comment"># Remote Logging (we use TCP for reliable delivery)</span>
+<span class="token comment"># An on-disk queue is created for this action. If the remote host is</span>
+<span class="token comment"># down, messages are spooled to disk and sent when it is up again.</span>
+<span class="token comment">#$ActionQueueFileName fwdRule1 # unique name prefix for spool files</span>
+<span class="token comment">#$ActionQueueMaxDiskSpace 1g   # 1gb space limit (use as much as possible)</span>
+<span class="token comment">#$ActionQueueSaveOnShutdown on # save messages to disk on shutdown</span>
+<span class="token comment">#$ActionQueueType LinkedList   # run asynchronously</span>
+<span class="token comment">#$ActionResumeRetryCount -1    # infinite retries if host is down</span>
+<span class="token comment"># remote host is: name/ip:port, e.g. 192.168.0.1:514, port optional</span>
+<span class="token comment">#*.* @@remote-host:514  </span>
+@@表示通過tcp協議傳送，使用TCP協議轉發到remote-host的514<span class="token punctuation">(</span>預設<span class="token punctuation">)</span>埠
+@表示通過udp進行轉發
+<span class="token comment"># ### end of the forwarding rule ###</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/kenny/linuxserver/httpd2tomcat.html" class="prev">
+        HTTPD/TOMCAT
+      </a></span> <span class="next"><a href="/kenny/linuxserver/pgsql.html">
+        PostgreSQL 安裝與配置
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/kenny/assets/js/app.f80db6d4.js" defer></script><script src="/kenny/assets/js/2.3fb14c61.js" defer></script><script src="/kenny/assets/js/8.ca446059.js" defer></script>
+  </body>
+</html>

@@ -24,6 +24,7 @@ module.exports = {
        {text: "AWS Solutions Architect Associate", link:"/aws certification/SAA/"},
               ],
       },
+      {text: "Network Associate", link:"/Network Associate/VLAN"},
       { 
         text: "English", 
       /* ariaLabel: "English Menu", */
@@ -64,10 +65,17 @@ module.exports = {
     "/linuxserver/": [
       //"",
       "NetworkManager",
+      "Route Table",
       "firewalld",
       "sftp",
       "httpd2tomcat",
+      "rsyslog",
       "pgsql",
+    ],
+
+    "/Network Associate/": [
+      //"",
+      "VLAN",
     ],
       
 
