@@ -44,7 +44,8 @@ module.exports = {
       "/aws server/" : [
         "",
         "awshttpd2tomcat",
-        "IAM",  
+        "IAM",
+        "VPC",  
         ],
         
       "/aws certification/": [
