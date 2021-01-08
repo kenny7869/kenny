@@ -20,7 +20,7 @@ module.exports = {
         text: "AWS Certification", 
        /* ariaLabel: "AWS certification Menu", */
        items: [
-       {text: "AWS Cloud Practitioner", link:"/aws certification/ACP/"},
+       {text: "AWS Cloud Practitioner-1", link:"/aws certification/ACP-1/"},
        {text: "AWS Solutions Architect Associate", link:"/aws certification/SAA/"},
               ],
       },
@@ -50,7 +50,7 @@ module.exports = {
         
       "/aws certification/": [
       //"",
-      "ACP",
+      "ACP-1",
       "SAA",
          ],     
 
@@ -70,6 +70,7 @@ module.exports = {
       "firewalld",
       "sftp",
       "httpd2tomcat",
+      "SSL SNI",
       "rsyslog",
       "pgsql",
     ],
