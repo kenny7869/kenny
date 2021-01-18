@@ -36,6 +36,7 @@ module.exports = {
       { text: "Straits Times", link: "/english/StraitsTimes"}
             ],
       },
+      {text: "Resources", link:"/Resources/"},
         ],
 
 	sidebarDepth: 2,
@@ -45,7 +46,8 @@ module.exports = {
         "",
         "awshttpd2tomcat",
         "IAM",
-        "VPC",  
+        "VPC",
+        "XRay",  
         ],
         
       "/aws certification/": [
@@ -78,6 +80,11 @@ module.exports = {
     "/Network Associate/": [
       //"",
       "VLAN",
+      "STP",
+    ],
+
+    "/Resources/": [
+     "", 
     ],
       
 
