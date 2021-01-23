@@ -14,8 +14,17 @@ module.exports = {
     smoothScroll: true,
 	nav: [
       { text: "Home", link: "/" },
+      { text: "Linux Basic", 
+      /* ariaLabel: "Linux Menu", */
+      items: [
+      {text: "系統目錄結構與管理", link: "/Linux/system directory"},
+      {text: "文件基本屬性", link: "/Linux/file basic"},
+      {text: "用户和群組管理", link: "/Linux/account"},
+      {text: "磁碟管理", link: "/Linux/disk"},
+      ],
+      },
+      { text: "Linux Server", link: "/linuxserver/NetworkManager/"},
       { text: "AWS Server", link: "/aws server/"},
-      { text: "Linux Server", link: "/linuxserver/NetworkManager"},
       { 
         text: "AWS Certification", 
        /* ariaLabel: "AWS certification Menu", */
@@ -54,7 +63,15 @@ module.exports = {
       //"",
       "ACP-1",
       "SAA",
-         ],     
+         ], 
+         
+      "/Linux/": [
+      //"",
+      "system directory",
+      "file basic",
+      "account",
+      "disk",
+      ],
 
       "/english/": [
       //"",
@@ -68,6 +85,7 @@ module.exports = {
     "/linuxserver/": [
       //"",
       "NetworkManager",
+      "sys resource",
       "Route Table",
       "firewalld",
       "sftp",
