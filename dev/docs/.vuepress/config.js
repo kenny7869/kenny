@@ -19,7 +19,7 @@ module.exports = {
       items: [
       {text: "系統目錄結構與管理", link: "/Linux/system directory"},
       {text: "文件基本屬性", link: "/Linux/file basic"},
-      {text: "用户和群組管理", link: "/Linux/account"},
+      {text: "用戶和群組管理", link: "/Linux/account"},
       {text: "磁碟管理", link: "/Linux/disk"},
       ],
       },
@@ -34,15 +34,14 @@ module.exports = {
               ],
       },
       {text: "Network Associate", link:"/Network Associate/VLAN"},
-      { 
-        text: "English", 
+      {text: "PostgreSQL", 
       /* ariaLabel: "English Menu", */
       items: [
-      { text: "hitutor", link:"/english/hitutor/" },
-      { text: "phrase", link:"/english/phrase/"},
-      { text: "NY Times", link:"/english/nytimes"},
-      { text: "South Morning China Post", link:"/english/scmp/"},
-      { text: "Straits Times", link: "/english/StraitsTimes"}
+      { text: "phrase", link:"/pgsql/phrase/"},
+      { text: "PostgreSQL 語法", link:"/pgsql/syntax/" },
+      { text: "NY Times", link:"/pgsql/nytimes"},
+      { text: "South Morning China Post", link:"/pgsql/scmp/"},
+      { text: "Straits Times", link: "/pgsql/StraitsTimes"}
             ],
       },
       {text: "Resources", link:"/Resources/"},
@@ -73,10 +72,10 @@ module.exports = {
       "disk",
       ],
 
-      "/english/": [
+      "/pgsql/": [
       //"",
-      "hitutor",
       "nytimes",
+      "syntax",
       "scmp",
       "StraitsTimes",
       "phrase",
