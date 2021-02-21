@@ -1,4 +1,10 @@
-# PostgreSQL 語法
+# SQL 語法
+
+## SQL 語法種類
+
+- 資料定義語言 ( Data Definition Language, DDL )：用以建立、修改或移除資料庫或其他資料庫物件的語法，以 **CREATE**、 **ALTER**、 **DROP** 語法為主
+- 資料處理語法 (Data Manipulation Language, DML)：用以處理理表格內資料的語法，以 **INSERT** 、**UPDATE**、**DELETE**、**SELECT** 語法為主
+- 資料控制語⾔言 (Data Control Language, DCL)：對使⽤者設定資料庫或其他資料庫物件使用權限的語法，以**GRANT**、**REVOKE** 語法為主
 
 預設情況下 PostgreSQL 安裝完成後，自帶了一個命令行工具 SQL Shell (psql)
 Linux 系統可以直接切換到 postgres 使用這來開啟命令行工具：

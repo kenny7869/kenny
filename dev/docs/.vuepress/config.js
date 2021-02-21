@@ -37,9 +37,9 @@ module.exports = {
       {text: "PostgreSQL", 
       /* ariaLabel: "English Menu", */
       items: [
-      { text: "phrase", link:"/pgsql/phrase/"},
-      { text: "PostgreSQL 語法", link:"/pgsql/syntax/" },
-      { text: "NY Times", link:"/pgsql/nytimes"},
+      { text: "SQL語法", link:"/pgsql/syntax/" },
+      { text: "資料庫", link:"/pgsql/Database/"},
+      { text: "表格", link:"/pgsql/Table"},
       { text: "South Morning China Post", link:"/pgsql/scmp/"},
       { text: "Straits Times", link: "/pgsql/StraitsTimes"}
             ],
@@ -74,9 +74,9 @@ module.exports = {
 
       "/pgsql/": [
       //"",
-      "nytimes",
       "syntax",
-      "scmp",
+      "Database",
+      "Table",
       "StraitsTimes",
       "phrase",
     ],

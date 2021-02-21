@@ -32,6 +32,9 @@ systemctl restart firewalld
 
 #重新載入防火牆設定
 firewall-cmd --reload
+
+#狀態 (state) 查詢，running 表示正常運行中
+firewall-cmd --state
 ```
 
 ## 查詢
@@ -75,14 +78,15 @@ firewall-cmd --zone=public --remove-port=6666/tcp --permanent
 #一次開啟多個
 firewall-cmd --zone=public --add-port=6666-6670/tcp
 ```
+## 允許服務連線規則
 
 - `–add-service`：透過服務名稱開放
 - `-remove-service`：透過服務名稱移除
 
 ```sh
-firewall-cmd --zone=public --add-service=mysql --permanent
+firewall-cmd --zone=public --add-service=http --permanent
 
-firewall-cmd --zone=public --remove-service=mysql --permanent
+firewall-cmd --zone=public --remove-service=http --permanent
 ```
 
 ## 連接埠轉發
@@ -111,20 +115,52 @@ firewall-cmd --zone=public --add-masquerade
 
 - `–add-rich-rule`：新增
 - `–remove-rich-rule`：移除
-- IP白名單：允IP存取
+  
+- 允許 (accept) 特定 IP 連線
 
 ```sh
-firewall-cmd --zone=public --add-rich-rule 'rule family="ipv4" source address=192.168.10.10 accept'
-#執行結果
-rule family="ipv4" source address="192.168.10.1" accept
+firewall-cmd --zone=public --add-rich-rule 'rule family="ipv4" \
+source address=192.168.10.10 accept' --permanent
 ```
 
-- IP黑名單：拒絕IP存取 
+- 允許 (accept) 特定 IP **使用特定服務**連線
 
 ```sh
-firewall-cmd --zone=public --add-rich-rule 'rule family="ipv4" source address="192.168.10.10" port port=22 protocol=tcp reject'
-#執行結果
-rule family="ipv4" source address="192.168.10.10" reject
+firewall-cmd --add-rich-rule 'rule family="ipv4" \
+source address="192.168.2.0/24" service name="ssh" accept' \
+--permanent
+```
+
+- 允許 (accept) 特定 IP **使用特定port**連線
+
+```sh
+firewall-cmd --add-rich-rule 'rule family="ipv4" \
+source address="192.168.2.0/24" port port="22" accept' \
+--permanent
+```
+
+- 拒絕 (reject) 或阻擋 (drop) 特定 IP 連線
+
+```sh
+firewall-cmd --add-rich-rule 'rule \
+family="ipv4" source address="110.88.4.5/32" reject' \
+--permanent 
+```
+
+- 拒絕 (reject) 或阻擋 (drop) **使用特定服務**連線
+
+```sh
+firewall-cmd --add-rich-rule 'rule family="ipv4" \
+source address="192.168.2.0/24" service name="ssh" reject' \
+--permanent
+```
+
+- 拒絕 (reject) 或阻擋 (drop) 特定 IP **使用特定port**連線
+
+```sh
+firewall-cmd --add-rich-rule 'rule family="ipv4" \
+source address="192.168.2.0/24" port port="22" reject' \
+--permanent
 ```
 
 - 也可以利用rich rules來設定連接埠轉發，如果轉發至不同主機的話，masquerade要開啟

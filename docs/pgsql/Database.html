@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>資料庫 (Database, DB) | Kenny&#39;s Lab</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    
+    <meta name="description" content="Lab memo">
+    
+    <link rel="preload" href="/kenny/assets/css/0.styles.d651372b.css" as="style"><link rel="preload" href="/kenny/assets/js/app.462580f2.js" as="script"><link rel="preload" href="/kenny/assets/js/2.9831e14e.js" as="script"><link rel="preload" href="/kenny/assets/js/9.c6076dfa.js" as="script"><link rel="prefetch" href="/kenny/assets/js/10.d08dae35.js"><link rel="prefetch" href="/kenny/assets/js/11.200127d0.js"><link rel="prefetch" href="/kenny/assets/js/12.8d04ed7d.js"><link rel="prefetch" href="/kenny/assets/js/13.a2691779.js"><link rel="prefetch" href="/kenny/assets/js/14.559dcfc0.js"><link rel="prefetch" href="/kenny/assets/js/15.d9bc4074.js"><link rel="prefetch" href="/kenny/assets/js/16.379329b2.js"><link rel="prefetch" href="/kenny/assets/js/17.534fffd5.js"><link rel="prefetch" href="/kenny/assets/js/18.d5b60df7.js"><link rel="prefetch" href="/kenny/assets/js/19.7f9ecbb4.js"><link rel="prefetch" href="/kenny/assets/js/20.30bbc777.js"><link rel="prefetch" href="/kenny/assets/js/21.eec5c946.js"><link rel="prefetch" href="/kenny/assets/js/22.d4d79bda.js"><link rel="prefetch" href="/kenny/assets/js/23.52e55223.js"><link rel="prefetch" href="/kenny/assets/js/24.89491916.js"><link rel="prefetch" href="/kenny/assets/js/25.dacd9609.js"><link rel="prefetch" href="/kenny/assets/js/26.e9258ff7.js"><link rel="prefetch" href="/kenny/assets/js/27.51089b61.js"><link rel="prefetch" href="/kenny/assets/js/28.a6de87d0.js"><link rel="prefetch" href="/kenny/assets/js/29.228a6b65.js"><link rel="prefetch" href="/kenny/assets/js/3.fd803356.js"><link rel="prefetch" href="/kenny/assets/js/30.068089ed.js"><link rel="prefetch" href="/kenny/assets/js/31.b310c84c.js"><link rel="prefetch" href="/kenny/assets/js/32.e64b69d0.js"><link rel="prefetch" href="/kenny/assets/js/33.83670cc6.js"><link rel="prefetch" href="/kenny/assets/js/34.e56132bf.js"><link rel="prefetch" href="/kenny/assets/js/35.627f6b5b.js"><link rel="prefetch" href="/kenny/assets/js/36.ea77ab71.js"><link rel="prefetch" href="/kenny/assets/js/4.34c779a8.js"><link rel="prefetch" href="/kenny/assets/js/5.f5c503fc.js"><link rel="prefetch" href="/kenny/assets/js/6.2bd9b100.js"><link rel="prefetch" href="/kenny/assets/js/7.a68be8fc.js"><link rel="prefetch" href="/kenny/assets/js/8.43e47de0.js">
+    <link rel="stylesheet" href="/kenny/assets/css/0.styles.d651372b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/kenny/" class="home-link router-link-active"><!----> <span class="site-name">Kenny's Lab</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/kenny/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux Basic" class="dropdown-title"><span class="title">Linux Basic</span> <span class="arrow down"></span></button> <button type="button" aria-label="Linux Basic" class="mobile-dropdown-title"><span class="title">Linux Basic</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/kenny/Linux/system directory.html" class="nav-link">
+  系統目錄結構與管理
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/Linux/file basic.html" class="nav-link">
+  文件基本屬性
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/Linux/account.html" class="nav-link">
+  用戶和群組管理
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/Linux/disk.html" class="nav-link">
+  磁碟管理
+</a></li></ul></div></div><div class="nav-item"><a href="/kenny/linuxserver/NetworkManager/" class="nav-link">
+  Linux Server
+</a></div><div class="nav-item"><a href="/kenny/aws server/" class="nav-link">
+  AWS Server
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="AWS Certification" class="dropdown-title"><span class="title">AWS Certification</span> <span class="arrow down"></span></button> <button type="button" aria-label="AWS Certification" class="mobile-dropdown-title"><span class="title">AWS Certification</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/kenny/aws certification/ACP-1/" class="nav-link">
+  AWS Cloud Practitioner-1
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/aws certification/SAA/" class="nav-link">
+  AWS Solutions Architect Associate
+</a></li></ul></div></div><div class="nav-item"><a href="/kenny/Network Associate/VLAN.html" class="nav-link">
+  Network Associate
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="PostgreSQL" class="dropdown-title"><span class="title">PostgreSQL</span> <span class="arrow down"></span></button> <button type="button" aria-label="PostgreSQL" class="mobile-dropdown-title"><span class="title">PostgreSQL</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/kenny/pgsql/syntax/" class="nav-link">
+  SQL語法
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/pgsql/Database/" class="nav-link">
+  資料庫
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/pgsql/Table.html" class="nav-link">
+  表格
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/pgsql/scmp/" class="nav-link">
+  South Morning China Post
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/pgsql/StraitsTimes.html" class="nav-link">
+  Straits Times
+</a></li></ul></div></div><div class="nav-item"><a href="/kenny/Resources/" class="nav-link">
+  Resources
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/kenny/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux Basic" class="dropdown-title"><span class="title">Linux Basic</span> <span class="arrow down"></span></button> <button type="button" aria-label="Linux Basic" class="mobile-dropdown-title"><span class="title">Linux Basic</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/kenny/Linux/system directory.html" class="nav-link">
+  系統目錄結構與管理
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/Linux/file basic.html" class="nav-link">
+  文件基本屬性
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/Linux/account.html" class="nav-link">
+  用戶和群組管理
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/Linux/disk.html" class="nav-link">
+  磁碟管理
+</a></li></ul></div></div><div class="nav-item"><a href="/kenny/linuxserver/NetworkManager/" class="nav-link">
+  Linux Server
+</a></div><div class="nav-item"><a href="/kenny/aws server/" class="nav-link">
+  AWS Server
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="AWS Certification" class="dropdown-title"><span class="title">AWS Certification</span> <span class="arrow down"></span></button> <button type="button" aria-label="AWS Certification" class="mobile-dropdown-title"><span class="title">AWS Certification</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/kenny/aws certification/ACP-1/" class="nav-link">
+  AWS Cloud Practitioner-1
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/aws certification/SAA/" class="nav-link">
+  AWS Solutions Architect Associate
+</a></li></ul></div></div><div class="nav-item"><a href="/kenny/Network Associate/VLAN.html" class="nav-link">
+  Network Associate
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="PostgreSQL" class="dropdown-title"><span class="title">PostgreSQL</span> <span class="arrow down"></span></button> <button type="button" aria-label="PostgreSQL" class="mobile-dropdown-title"><span class="title">PostgreSQL</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/kenny/pgsql/syntax/" class="nav-link">
+  SQL語法
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/pgsql/Database/" class="nav-link">
+  資料庫
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/pgsql/Table.html" class="nav-link">
+  表格
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/pgsql/scmp/" class="nav-link">
+  South Morning China Post
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/pgsql/StraitsTimes.html" class="nav-link">
+  Straits Times
+</a></li></ul></div></div><div class="nav-item"><a href="/kenny/Resources/" class="nav-link">
+  Resources
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/kenny/pgsql/syntax.html" class="sidebar-link">SQL 語法</a></li><li><a href="/kenny/pgsql/Database.html" aria-current="page" class="active sidebar-link">資料庫 (Database, DB)</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/kenny/pgsql/Database.html#關聯式資料庫-relational-database" class="sidebar-link">關聯式資料庫 (Relational Database)</a></li><li class="sidebar-sub-header"><a href="/kenny/pgsql/Database.html#建立一個資料庫" class="sidebar-link">建立一個資料庫</a></li><li class="sidebar-sub-header"><a href="/kenny/pgsql/Database.html#刪除資料庫" class="sidebar-link">刪除資料庫</a></li><li class="sidebar-sub-header"><a href="/kenny/pgsql/Database.html#選擇資料庫" class="sidebar-link">選擇資料庫</a></li><li class="sidebar-sub-header"><a href="/kenny/pgsql/Database.html#備份-還原資料庫" class="sidebar-link">備份/還原資料庫</a></li><li class="sidebar-sub-header"><a href="/kenny/pgsql/Database.html#綱要-schema" class="sidebar-link">綱要 (Schema)</a></li><li class="sidebar-sub-header"><a href="/kenny/pgsql/Database.html#資料庫正規化" class="sidebar-link">資料庫正規化</a></li></ul></li><li><a href="/kenny/pgsql/Table.html" class="sidebar-link">表格 (Table)</a></li><li><a href="/kenny/pgsql/StraitsTimes.html" class="sidebar-link">The Straits Times</a></li><li><a href="/kenny/pgsql/phrase.html" class="sidebar-link">Phrase</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="資料庫-database-db"><a href="#資料庫-database-db" class="header-anchor">#</a> 資料庫 (Database, DB)</h1> <p>儲存著大量表格以及相關資料庫物件 (tables, views...) 的總合儲存體。每個資料庫都會轉化成特定檔案並儲存在電腦內</p> <h2 id="關聯式資料庫-relational-database"><a href="#關聯式資料庫-relational-database" class="header-anchor">#</a> 關聯式資料庫 (Relational Database)</h2> <p>以表格（table）方式來儲存與呈現資料，再以數學集合論為基礎將表格與表格之間建立關聯用以處理複雜的資料關係，SQL 指令就是用於關聯式資料庫<br>
+將所有資料儲存在一個表格內會有資料重複問題，如果資料量大會造成浪費儲存空間、資料錯誤率提⾼、增加修改上困難，要解決資料重複的問題，便將一個表格拆成多個表格並透過關聯欄位來做相互的關聯</p> <h2 id="建立一個資料庫"><a href="#建立一個資料庫" class="header-anchor">#</a> 建立一個資料庫</h2> <p>PostgreSQL 建立資料庫可以用以下三種方式：</p> <ul><li>使用 CREATE DATABASE SQL 語句來建立</li> <li>使用 createdb 命令來建立</li> <li>使用 pgAdmin 工具</li></ul> <p>切換使用者為 postgres，進入 postgreSQL</p> <div class="language-ssh extra-class"><pre class="language-text"><code>sudo - postgres
+</code></pre></div><div class="language-sh extra-class"><pre class="language-sh"><code>~$ psql
+
+<span class="token assign-left variable">postgres</span><span class="token operator">=</span><span class="token comment">#</span>
+</code></pre></div><p><strong>CREATE DATABASE</strong> 建立資料庫語法：</p> <div class="language-SQL extra-class"><pre class="language-sql"><code><span class="token keyword">CREATE</span> <span class="token keyword">DATABASE</span> dbname<span class="token punctuation">;</span>
+</code></pre></div><p><strong>createdb</strong> 建立資料庫語法：</p> <div class="language-SQL extra-class"><pre class="language-sql"><code>createdb <span class="token punctuation">[</span><span class="token keyword">option</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">]</span> <span class="token punctuation">[</span>dbname <span class="token punctuation">[</span>description<span class="token punctuation">]</span><span class="token punctuation">]</span>
+</code></pre></div><p>說明：</p> <ul><li>dbname：要創建的資料庫名稱</li> <li>description：關於新創建的資料庫相關的說明</li> <li>options：參數可選項</li></ul> <p>參數選項：</p> <p><code>-D tablespace</code>：指定資料庫預設的 tablespace<br> <code>-e</code>：將 createdb 生成的命令發送到服務端<br> <code>-E encoding</code>：指定資料庫的編碼<br> <code>-l locale</code>：指定資料庫的語言環境<br> <code>-T template</code>：指定創建此資料庫的模板<br> <code>--help</code>：顯示 createdb 命令的幫助信息<br> <code>-h host</code>：指定伺服器的主機名<br> <code>-p port</code>：指定伺服器監聽的端口，或者 socket 文件<br> <code>-U username</code>：連線資料庫的使用者名稱<br> <code>-w</code>：忽略輸入密碼<br> <code>-W</code>：連接時強制要求輸入密碼</p> <p><strong>pgAdmin</strong> 工具建立資料庫，Databases 圖示右鍵 &gt; Create &gt; Database</p> <p><img src="/kenny/assets/img/psql-1.a89e370d.png" alt="psql-1" title="psql-1"></p> <h2 id="刪除資料庫"><a href="#刪除資料庫" class="header-anchor">#</a> 刪除資料庫</h2> <p>PostgreSQL 刪除資料庫可以用以下三種方式：</p> <ul><li>使用 <strong>DROP DATABASE</strong> SQL 敘述來刪除</li> <li>使用 <strong>dropdb</strong> 指令來刪除</li> <li>使用 <strong>pgAdmin</strong> 工具</li></ul> <p><strong>DROP DATABASE</strong> 刪除資料庫：</p> <ul><li>會刪除資料庫的系統目錄項並且刪除包含資料的檔案目錄</li> <li>只能由超級管理員或資料庫擁有者執行</li></ul> <div class="language-SQL extra-class"><pre class="language-sql"><code><span class="token keyword">DROP</span> <span class="token keyword">DATABASE</span> <span class="token punctuation">[</span> <span class="token keyword">IF</span> <span class="token keyword">EXISTS</span> <span class="token punctuation">]</span> name
+</code></pre></div><p>參數說明：</p> <ul><li><strong>IF EXISTS</strong>：如果資料庫不存在則發出提示訊息，而不是錯誤訊息</li> <li><strong>name</strong>：要刪除的資料庫的名稱</li></ul> <p><strong>dropdb</strong> 刪除資料庫</p> <ul><li>是 DROP DATABASE 的套件裝器</li> <li>用於刪除 PostgreSQL 資料庫。</li> <li>只能由超級管理員或資料庫擁有者執行</li></ul> <div class="language-SQL extra-class"><pre class="language-sql"><code>dropdb <span class="token punctuation">[</span>connection<span class="token operator">-</span><span class="token keyword">option</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">]</span> <span class="token punctuation">[</span><span class="token keyword">option</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">]</span> dbname
+</code></pre></div><p>參數說明：</p> <ul><li><strong>dbname</strong>：要刪除的資料庫名。</li> <li><strong>options</strong>：引數可選項，可以是以下值：</li></ul> <p><code>-**e</code> ：**顯示 dropdb 生成的指令併發送到資料庫伺服器<br> <code>-**i</code>：**在做刪除的工作之前發出一個驗證提示<br> <code>-**V</code>：**列印 dropdb 版本並退出<br> <code>--if-exists</code>：**如果資料庫不存在則發出提示訊息，而不是錯誤訊息<code></code>--<strong>help</strong><code>：顯示有關 dropdb 指令的幫助訊息</code>-<strong>h host</strong><code>：指定執行伺服器的主機名</code>-**p port<code>：**指定伺服器監聽的連接埠，或者 socket 檔案</code>-**U username<code>：**連線資料庫的使用者名稱</code>-**w<code>：**忽略輸入密碼</code>-<strong>W<code>：**連線時強制要求輸入密碼</code>-</strong>-maintenance-db=dbname`：**刪除資料庫時指定連線的資料庫，預設為 postgres，如果它不存在則使用 template1</p> <p><strong>pgAdmin</strong> 工具刪除資料庫，指定 Database 右鍵 &gt; Delete/Drop</p> <p><img src="/kenny/assets/img/psql-2.1e6c6621.png" alt="psql-2" title="psql-2"></p> <h2 id="選擇資料庫"><a href="#選擇資料庫" class="header-anchor">#</a> 選擇資料庫</h2> <p><strong>資料庫的指令</strong>：</p> <p>使用 <code>\l</code> 用於檢視已經存在的資料庫</p> <div class="language-SQL extra-class"><pre class="language-sql"><code>postgres<span class="token operator">=</span><span class="token comment"># \l</span>
+</code></pre></div><p>使用 <code>\c</code> 加上資料庫名來進入資料庫</p> <div class="language-SQL extra-class"><pre class="language-sql"><code>postgres<span class="token operator">=</span><span class="token comment"># \c dbname</span>
+</code></pre></div><div class="language-sql extra-class"><pre class="language-sql"><code>psql <span class="token operator">-</span>h localhost <span class="token operator">-</span>p <span class="token number">5432</span> <span class="token operator">-</span>U postgress dbname
+</code></pre></div><p><strong>pgAdmin</strong> 工具：</p> <p><img src="/kenny/assets/img/psql-3.c7fac602.png" alt="psql-3" title="psql-3"></p> <h2 id="備份-還原資料庫"><a href="#備份-還原資料庫" class="header-anchor">#</a> 備份/還原資料庫</h2> <ul><li><strong>pg_dump</strong> 指令來備份整個資料庫</li></ul> <p>語法：</p> <div class="language-sql extra-class"><pre class="language-sql"><code>pg_dump <span class="token punctuation">[</span><span class="token keyword">option</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">]</span> <span class="token punctuation">[</span>dbname<span class="token punctuation">]</span>
+</code></pre></div><p>常用選項參數說明：</p> <p><code>-F</code> or <code>--format</code>：選擇輸出的格式，格式可以為以下選項：<br>
+p：輸出純文本SQL腳本文件（預設）<br>
+t：輸出適合輸入到 pg_restore 裡的 tar 歸檔文件<br>
+c：輸出適於給 pg_restore 用的客製化歸檔。 這是最靈活的格式，它允許對裝載的資料和對像定義進行重新排列，預設是壓縮的<br> <code>-f</code> or <code>--file</code>：把輸出發往指定的文件</p> <p>範例：</p> <div class="language-sql extra-class"><pre class="language-sql"><code>pg_dump <span class="token operator">-</span>F c <span class="token operator">-</span>f mydb <span class="token operator">&gt;</span> mydb<span class="token punctuation">.</span><span class="token keyword">dump</span>
+</code></pre></div><ul><li><strong>pg_restore</strong> 指令來還原資料庫</li></ul> <p>語法：</p> <div class="language-sql extra-class"><pre class="language-sql"><code>pg_restore <span class="token punctuation">[</span><span class="token keyword">option</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">]</span> dbname
+</code></pre></div><p>常用選項參數說明：</p> <p><code>-d</code> or <code>--dbname=</code> ：與指定資料庫連線並且直接恢復到該資料庫中<br> <code>-v</code> or <code>--verbose</code>：輸出比較詳細的訊息</p> <p>範例：</p> <div class="language-sql extra-class"><pre class="language-sql"><code>pg_restore <span class="token operator">-</span>d newdb mydb<span class="token punctuation">.</span><span class="token keyword">dump</span>
+</code></pre></div><h2 id="綱要-schema"><a href="#綱要-schema" class="header-anchor">#</a> 綱要 (Schema)</h2> <p>定義了資料庫物件的集合，包含表格、屬性 (fields)、關聯聯性 (relationships)、視圖 (views)、預存程序 (stored procedures) 等資料庫物件</p> <p>優點：</p> <ul><li>允許多個使用者使用一個資料庫並且不會互相干擾</li> <li>將資料庫物件組織成邏輯組以便更容易管理</li> <li>第三方應用的物件可以放在獨立的 Schema 中，這樣它們就不會與其他物件的名稱發生衝突</li></ul> <p>建立 SCHEMA 語法：<strong>CREATE SCHEMA</strong></p> <div class="language-SQL extra-class"><pre class="language-sql"><code>postgres<span class="token operator">=</span><span class="token comment"># create schema myschema;</span>
+<span class="token keyword">CREATE</span> <span class="token keyword">SCHEMA</span>
+</code></pre></div><p>輸出結果 &quot;CREATE SCHEMA&quot; 就代表 SCHEMA 建立成功</p> <p>刪除 SCHEMA 語法：</p> <ul><li>刪除一個空的 SCHEMA：</li></ul> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">DROP</span> <span class="token keyword">SCHEMA</span> myschema<span class="token punctuation">;</span>
+</code></pre></div><ul><li>刪除一個 SCHEMA 以及其中包含的所有物件：</li></ul> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">DROP</span> <span class="token keyword">SCHEMA</span> myschema <span class="token keyword">CASCADE</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="資料庫正規化"><a href="#資料庫正規化" class="header-anchor">#</a> 資料庫正規化</h2> <ul><li>建立資料庫內的表格與欄位時所應採⽤的設計法則</li> <li>減少表格內的資料重複過冗</li> <li>增進資料的一致性</li></ul> <p>正規化種類</p> <ol><li>第 1 正規化 (First Normal Form, 1NF)：每個欄位內都是儲存單⼀值</li> <li>第 2 正規化 (Second Normal Form, 2NF)：符合第 1 正規化，非鍵欄位需要與鍵欄位 (主鍵與候選鍵) 有相依性，否則應予移除</li> <li>第 3 正規化 (Third Normal Form, 3NF)：符合第 2 正規化，非鍵欄位間不應有相依性，否則應予移除</li></ol> <p>一般建議滿足 3NF 即可，滿足越多正規化，理論上而⾔資料的關聯聯會有更好的約束性；但也導致表格過多、資料更破碎而需要常常合併表格造成執行效能差的結果</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/kenny/pgsql/syntax.html" class="prev">
+        SQL 語法
+      </a></span> <span class="next"><a href="/kenny/pgsql/Table.html">
+        表格 (Table)
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/kenny/assets/js/app.462580f2.js" defer></script><script src="/kenny/assets/js/2.9831e14e.js" defer></script><script src="/kenny/assets/js/9.c6076dfa.js" defer></script>
+  </body>
+</html>
