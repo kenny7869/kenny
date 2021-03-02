@@ -44,7 +44,14 @@ module.exports = {
       { text: "Straits Times", link: "/pgsql/StraitsTimes"}
             ],
       },
-      {text: "Resources", link:"/Resources/"},
+      {text: "JAVA", 
+      /* ariaLabel: "English Menu", */
+      items: [
+      {text: "HelloWorld", link:"/JAVA/helloworld"}, 
+      {text: "變數、資料型態、運算子", link:"/JAVA/variable/"},
+      ],
+     
+    },
         ],
 
 	sidebarDepth: 2,
@@ -100,8 +107,10 @@ module.exports = {
       "STP",
     ],
 
-    "/Resources/": [
-     "", 
+    "/JAVA/": [
+     //"",
+     "helloworld", 
+     "variable",
     ],
       
 
