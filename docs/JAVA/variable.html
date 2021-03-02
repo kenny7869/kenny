@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>變數、資料型態、運算子 | Kenny&#39;s Lab</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    
+    <meta name="description" content="Lab memo">
+    
+    <link rel="preload" href="/kenny/assets/css/0.styles.d651372b.css" as="style"><link rel="preload" href="/kenny/assets/js/app.6246847d.js" as="script"><link rel="preload" href="/kenny/assets/js/2.56937fff.js" as="script"><link rel="preload" href="/kenny/assets/js/7.db156afb.js" as="script"><link rel="prefetch" href="/kenny/assets/js/10.ab2c88ea.js"><link rel="prefetch" href="/kenny/assets/js/11.3fb785eb.js"><link rel="prefetch" href="/kenny/assets/js/12.6958b5b8.js"><link rel="prefetch" href="/kenny/assets/js/13.c34678df.js"><link rel="prefetch" href="/kenny/assets/js/14.6a4aec39.js"><link rel="prefetch" href="/kenny/assets/js/15.4d460a54.js"><link rel="prefetch" href="/kenny/assets/js/16.65e28c60.js"><link rel="prefetch" href="/kenny/assets/js/17.b91499cb.js"><link rel="prefetch" href="/kenny/assets/js/18.eb6f3175.js"><link rel="prefetch" href="/kenny/assets/js/19.33ec3332.js"><link rel="prefetch" href="/kenny/assets/js/20.d8b07f8e.js"><link rel="prefetch" href="/kenny/assets/js/21.1af47a5e.js"><link rel="prefetch" href="/kenny/assets/js/22.6f87c516.js"><link rel="prefetch" href="/kenny/assets/js/23.5a36bc22.js"><link rel="prefetch" href="/kenny/assets/js/24.6ad1514f.js"><link rel="prefetch" href="/kenny/assets/js/25.a41b24c4.js"><link rel="prefetch" href="/kenny/assets/js/26.c4ddf7a9.js"><link rel="prefetch" href="/kenny/assets/js/27.a47a17c2.js"><link rel="prefetch" href="/kenny/assets/js/28.60f62293.js"><link rel="prefetch" href="/kenny/assets/js/29.06bd62f2.js"><link rel="prefetch" href="/kenny/assets/js/3.69eadf59.js"><link rel="prefetch" href="/kenny/assets/js/30.608894e3.js"><link rel="prefetch" href="/kenny/assets/js/31.632a269b.js"><link rel="prefetch" href="/kenny/assets/js/32.3f0bc75c.js"><link rel="prefetch" href="/kenny/assets/js/33.c32c3fe1.js"><link rel="prefetch" href="/kenny/assets/js/34.fc0b4a32.js"><link rel="prefetch" href="/kenny/assets/js/35.0a0c0ffb.js"><link rel="prefetch" href="/kenny/assets/js/36.cc1b3bf9.js"><link rel="prefetch" href="/kenny/assets/js/37.3e936244.js"><link rel="prefetch" href="/kenny/assets/js/4.5bfcbf41.js"><link rel="prefetch" href="/kenny/assets/js/5.18037fb2.js"><link rel="prefetch" href="/kenny/assets/js/6.17c3fce8.js"><link rel="prefetch" href="/kenny/assets/js/8.353065bf.js"><link rel="prefetch" href="/kenny/assets/js/9.9873ddc3.js">
+    <link rel="stylesheet" href="/kenny/assets/css/0.styles.d651372b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/kenny/" class="home-link router-link-active"><!----> <span class="site-name">Kenny's Lab</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/kenny/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux Basic" class="dropdown-title"><span class="title">Linux Basic</span> <span class="arrow down"></span></button> <button type="button" aria-label="Linux Basic" class="mobile-dropdown-title"><span class="title">Linux Basic</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/kenny/Linux/system directory.html" class="nav-link">
+  系統目錄結構與管理
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/Linux/file basic.html" class="nav-link">
+  文件基本屬性
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/Linux/account.html" class="nav-link">
+  用戶和群組管理
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/Linux/disk.html" class="nav-link">
+  磁碟管理
+</a></li></ul></div></div><div class="nav-item"><a href="/kenny/linuxserver/NetworkManager/" class="nav-link">
+  Linux Server
+</a></div><div class="nav-item"><a href="/kenny/aws server/" class="nav-link">
+  AWS Server
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="AWS Certification" class="dropdown-title"><span class="title">AWS Certification</span> <span class="arrow down"></span></button> <button type="button" aria-label="AWS Certification" class="mobile-dropdown-title"><span class="title">AWS Certification</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/kenny/aws certification/ACP-1/" class="nav-link">
+  AWS Cloud Practitioner-1
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/aws certification/SAA/" class="nav-link">
+  AWS Solutions Architect Associate
+</a></li></ul></div></div><div class="nav-item"><a href="/kenny/Network Associate/VLAN.html" class="nav-link">
+  Network Associate
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="PostgreSQL" class="dropdown-title"><span class="title">PostgreSQL</span> <span class="arrow down"></span></button> <button type="button" aria-label="PostgreSQL" class="mobile-dropdown-title"><span class="title">PostgreSQL</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/kenny/pgsql/syntax/" class="nav-link">
+  SQL語法
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/pgsql/Database/" class="nav-link">
+  資料庫
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/pgsql/Table.html" class="nav-link">
+  表格
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/pgsql/scmp/" class="nav-link">
+  South Morning China Post
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/pgsql/StraitsTimes.html" class="nav-link">
+  Straits Times
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JAVA" class="dropdown-title"><span class="title">JAVA</span> <span class="arrow down"></span></button> <button type="button" aria-label="JAVA" class="mobile-dropdown-title"><span class="title">JAVA</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/kenny/JAVA/helloworld.html" class="nav-link">
+  HelloWorld
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/JAVA/variable/" class="nav-link">
+  變數、資料型態、運算子
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/kenny/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux Basic" class="dropdown-title"><span class="title">Linux Basic</span> <span class="arrow down"></span></button> <button type="button" aria-label="Linux Basic" class="mobile-dropdown-title"><span class="title">Linux Basic</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/kenny/Linux/system directory.html" class="nav-link">
+  系統目錄結構與管理
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/Linux/file basic.html" class="nav-link">
+  文件基本屬性
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/Linux/account.html" class="nav-link">
+  用戶和群組管理
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/Linux/disk.html" class="nav-link">
+  磁碟管理
+</a></li></ul></div></div><div class="nav-item"><a href="/kenny/linuxserver/NetworkManager/" class="nav-link">
+  Linux Server
+</a></div><div class="nav-item"><a href="/kenny/aws server/" class="nav-link">
+  AWS Server
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="AWS Certification" class="dropdown-title"><span class="title">AWS Certification</span> <span class="arrow down"></span></button> <button type="button" aria-label="AWS Certification" class="mobile-dropdown-title"><span class="title">AWS Certification</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/kenny/aws certification/ACP-1/" class="nav-link">
+  AWS Cloud Practitioner-1
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/aws certification/SAA/" class="nav-link">
+  AWS Solutions Architect Associate
+</a></li></ul></div></div><div class="nav-item"><a href="/kenny/Network Associate/VLAN.html" class="nav-link">
+  Network Associate
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="PostgreSQL" class="dropdown-title"><span class="title">PostgreSQL</span> <span class="arrow down"></span></button> <button type="button" aria-label="PostgreSQL" class="mobile-dropdown-title"><span class="title">PostgreSQL</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/kenny/pgsql/syntax/" class="nav-link">
+  SQL語法
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/pgsql/Database/" class="nav-link">
+  資料庫
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/pgsql/Table.html" class="nav-link">
+  表格
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/pgsql/scmp/" class="nav-link">
+  South Morning China Post
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/pgsql/StraitsTimes.html" class="nav-link">
+  Straits Times
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JAVA" class="dropdown-title"><span class="title">JAVA</span> <span class="arrow down"></span></button> <button type="button" aria-label="JAVA" class="mobile-dropdown-title"><span class="title">JAVA</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/kenny/JAVA/helloworld.html" class="nav-link">
+  HelloWorld
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/JAVA/variable/" class="nav-link">
+  變數、資料型態、運算子
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/kenny/JAVA/helloworld.html" class="sidebar-link">HelloWorld</a></li><li><a href="/kenny/JAVA/variable.html" aria-current="page" class="active sidebar-link">變數、資料型態、運算子</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/kenny/JAVA/variable.html#variable-變數" class="sidebar-link">Variable 變數</a></li><li class="sidebar-sub-header"><a href="/kenny/JAVA/variable.html#基本資料型態" class="sidebar-link">基本資料型態</a></li><li class="sidebar-sub-header"><a href="/kenny/JAVA/variable.html#運算子" class="sidebar-link">運算子</a></li><li class="sidebar-sub-header"><a href="/kenny/JAVA/variable.html#資料型態轉換" class="sidebar-link">資料型態轉換</a></li><li class="sidebar-sub-header"><a href="/kenny/JAVA/variable.html#註解" class="sidebar-link">註解</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="變數、資料型態、運算子"><a href="#變數、資料型態、運算子" class="header-anchor">#</a> 變數、資料型態、運算子</h1> <h2 id="variable-變數"><a href="#variable-變數" class="header-anchor">#</a> Variable 變數</h2> <ul><li>變數是一個我們自⼰定義的名稱，它可以代表一個數值、一串⽂字或是⼀個物件，習慣上變數都是小寫</li> <li>宣告變數：在Java語言中，所有的變數在使用前必須宣告，語法中的「=」，是將右邊的值賦予給左邊的變數，最後以分號作為語法的結束<br>
+基本格式：</li></ul> <div class="language-java extra-class"><pre class="language-java"><code><span class="token class-name">String</span> name <span class="token operator">=</span> “<span class="token class-name">Amy</span>”<span class="token punctuation">;</span>
+<span class="token keyword">int</span> age <span class="token operator">=</span> <span class="token number">21</span><span class="token punctuation">;</span>
+</code></pre></div><ul><li><p>物件屬性(全域變數) &amp; 區域變數</p> <p><code>物件屬性</code>：可提供給其他物件使⽤，宣告在 class 層中，不⽤給初始值，可提供給方法(method)使⽤，但必須在方法之外，有修飾子<br> <code>區域變數</code>：在 void 層宣告，不可以提供給其他物件使⽤，亦不可以提供給其他方法使⽤，必須要給初始值，沒有修飾子</p></li> <li><p>Java 程式語言的變數需要宣告之前，必需給予一個型態，可分為兩種：</p> <ol><li>基本資料型態(primitive data type)：共8種</li> <li>類別型態：開頭字母為大寫</li></ol></li></ul> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">package</span> <span class="token namespace">kenny</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Demo4_1</span>；<span class="token punctuation">{</span>
+
+    <span class="token comment">//物件屬性</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">String</span> gender<span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment">//類別型態變數</span>
+        <span class="token class-name">String</span> name <span class="token operator">=</span> <span class="token string">&quot;Kenny&quot;</span><span class="token punctuation">;</span>
+        <span class="token comment">//基本資料型態變數</span>
+        <span class="token keyword">int</span> age <span class="token operator">=</span> <span class="token number">21</span><span class="token punctuation">;</span>
+
+        gender <span class="token operator">=</span> <span class="token string">&quot;male&quot;</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;My name is &quot;</span> <span class="token operator">+</span> name <span class="token operator">+</span> <span class="token string">&quot;, I'm &quot;</span> <span class="token operator">+</span> age <span class="token operator">+</span> <span class="token string">&quot; years old. And I'm a &quot;</span> <span class="token operator">+</span> gender<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="基本資料型態"><a href="#基本資料型態" class="header-anchor">#</a> 基本資料型態</h2> <ul><li>Java 的所有資料型態</li></ul> <p><img src="/kenny/assets/img/java-2.35a46deb.png" alt="java-2" title="java-2"></p> <p><img src="/kenny/assets/img/java-3.d0b8d5f2.png" alt="java-3" title="java-3"></p> <ul><li><p>Overflow (溢值)：當某個變數的大小超過所能表示的範圍時，將會產生溢位</p></li> <li><p>整數型態：</p></li></ul> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">package</span> <span class="token namespace">kenny</span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Demo4_2</span> <span class="token punctuation">{</span>
+
+	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token comment">// TODO Auto-generated method stub</span>
+		<span class="token keyword">int</span> up <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span>
+		<span class="token keyword">int</span> down <span class="token operator">=</span> <span class="token number">6</span><span class="token punctuation">;</span>
+		<span class="token keyword">int</span> height <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+		
+		<span class="token keyword">int</span> area <span class="token operator">=</span> <span class="token punctuation">(</span>up<span class="token operator">+</span>down<span class="token punctuation">)</span><span class="token operator">*</span>height<span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">;</span>
+		
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>area<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+</code></pre></div><ul><li>實數型態：</li></ul> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">package</span> <span class="token namespace">kenny</span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Demo4_3</span> <span class="token punctuation">{</span>
+
+	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token comment">// TODO Auto-generated method stub</span>
+		<span class="token keyword">int</span> pv <span class="token operator">=</span> <span class="token number">10000</span><span class="token punctuation">;</span>
+		<span class="token keyword">double</span> i <span class="token operator">=</span> <span class="token number">0.0084</span><span class="token punctuation">;</span>
+		<span class="token keyword">int</span> n <span class="token operator">=</span> <span class="token number">12</span><span class="token punctuation">;</span>
+		
+		<span class="token keyword">double</span> fv <span class="token operator">=</span> pv <span class="token operator">*</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">pow</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token operator">+</span>i<span class="token punctuation">)</span><span class="token punctuation">,</span> n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;未來財富：&quot;</span><span class="token operator">+</span> fv<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>字元、布林值型態：<br> <code>char</code>：亦可以透過 ASCII CODE 來給值</li></ul> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">package</span> <span class="token namespace">kenny</span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Sample4_4</span> <span class="token punctuation">{</span>
+
+	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token comment">// TODO Auto-generated method stub</span>
+		<span class="token keyword">char</span> a <span class="token operator">=</span> <span class="token string">'z'</span><span class="token punctuation">;</span>
+		<span class="token comment">//使用ASCII CODE 來給值</span>
+		<span class="token keyword">char</span> c <span class="token operator">=</span> <span class="token number">67</span><span class="token punctuation">;</span>
+		
+		<span class="token keyword">boolean</span> b <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+		
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="運算子"><a href="#運算子" class="header-anchor">#</a> 運算子</h2> <ul><li><p>算術運算子<br> <code>+</code>：加<br> <code>-</code>：減<br> <code>*</code>：乘<br> <code>/</code>：除<br> <code>%</code>：取餘數<br> <code>++</code>：+1遞增<br> <code>--</code>：-1遞減<br> <code>a+=b</code>：a=a+b</p></li> <li><p>比較運算子<br> <code>==</code>：等於<br> <code>！=</code>：不等於<br> <code>&gt;</code>：大於<br> <code>&lt;</code>：小於<br> <code>&gt;=</code>：大於等於<br> <code>&lt;=</code>：小於等於</p></li> <li><p>邏輯運算子<br> <code>!</code>：NOT<br> <code>&amp;&amp;</code>：AND<br> <code>| |</code>：OR</p></li> <li><p>三元條件運算子<br> <code>?:</code>：條件式 <code>?</code> 成立回傳值 <code>:</code> 失敗回傳值</p></li></ul> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">package</span> <span class="token namespace">kenny</span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Sample4_6</span> <span class="token punctuation">{</span>
+
+	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span>
+		<span class="token keyword">int</span> b <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+		
+		<span class="token comment">//取餘數</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>a<span class="token operator">%</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token comment">//a遞增</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>a<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token comment">//b遞減</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>b<span class="token operator">--</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token comment">//a+=b 等同 a=a+b</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>a<span class="token operator">+=</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token comment">//大於</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>b<span class="token operator">&gt;</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token comment">//等於</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>a<span class="token operator">==</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token comment">//不等於</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>a<span class="token operator">!=</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token comment">//三元運算</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>a<span class="token operator">&lt;</span>b <span class="token operator">?</span> <span class="token string">&quot;yes&quot;</span><span class="token operator">:</span><span class="token string">&quot;no&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token comment">//邏輯運算</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token boolean">true</span> <span class="token operator">&amp;&amp;</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token boolean">true</span> <span class="token operator">||</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+		
+	<span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="資料型態轉換"><a href="#資料型態轉換" class="header-anchor">#</a> 資料型態轉換</h2> <p>型態轉換發生在運算子左右兩邊的運算元型態不同時</p> <ul><li>強制型態轉換：將資料型態強制轉換成另一種型態的語法<br>
+格式：(type)value type;</li></ul> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">package</span> <span class="token namespace">kenny</span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Sample4_5</span> <span class="token punctuation">{</span>
+
+	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token comment">// TODO Auto-generated method stub</span>
+		<span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+		<span class="token keyword">long</span> l <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">long</span><span class="token punctuation">)</span>i<span class="token punctuation">;</span>
+		
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>l<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>編譯器強制型態轉換：程式中的整數預設為int，浮點數預設為double，因此需要告訴編譯器⽤ long、float 配置長度</li></ul> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">package</span> <span class="token namespace">kenny</span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Sample4_5</span> <span class="token punctuation">{</span>
+
+	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				
+		<span class="token keyword">long</span> j <span class="token operator">=</span> <span class="token number">2345678901L</span><span class="token punctuation">;</span>
+		<span class="token keyword">float</span> k <span class="token operator">=</span> <span class="token number">3.14F</span><span class="token punctuation">;</span>
+		
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>j<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li><p>自動型態轉換<br>
+Java會在下列條件皆成立時，自動做資料型態的轉換：</p> <ol><li>轉換前的資料型態與轉換後的型態相容</li> <li>轉換後的資料型態之表示範圍比轉換前的型態大<br>
+例如： int 和 float 相加，int 會被轉成 float<br>
+char 和 int 相加，char 會被轉成 int</li></ol></li> <li><p>基本資料型態與對應的內建類別：Java 中有兩種型態系統，基本型態與類別型態，使用基本型態目的在於效率，然而更多時候，會使用類別型態建立實例，因為物件本身可以攜帶更多資訊</p></li></ul> <p><img src="/kenny/assets/img/java-4.16da7468.png" alt="java-4" title="java-4"></p> <ul><li>包裹型態（Wrapper Types）<br>
+要讓基本型態像物件一樣操作，可以使用 Long、Integer、Double、Float、Boolean、Byte 等類別型態來包裹（Wrap）基本型態，用 new 來建構一個實例的物件</li></ul> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">package</span> <span class="token namespace">kenny</span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Sample4_5</span> <span class="token punctuation">{</span>
+
+	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token comment">// TODO Auto-generated method stub</span>
+		<span class="token class-name">Double</span> d <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Double</span> <span class="token punctuation">(</span><span class="token number">3.14</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>d<span class="token punctuation">.</span>SIZE<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>d<span class="token punctuation">.</span><span class="token function">intValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>⾃動裝箱(autoboxing, unboxing)<br>
+編譯器⾃動將基本資料型態轉換為物件</li></ul> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">package</span> <span class="token namespace">kenny</span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Sample4_5</span> <span class="token punctuation">{</span>
+
+	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				<span class="token comment">// Autoboxing</span>
+				<span class="token keyword">double</span> d3 <span class="token operator">=</span> <span class="token number">3.14</span><span class="token punctuation">;</span>
+				<span class="token class-name">Double</span> d4 <span class="token operator">=</span> d3<span class="token punctuation">;</span>
+				<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">&quot;d4:&quot;</span><span class="token operator">+</span>d4<span class="token punctuation">)</span><span class="token punctuation">;</span>
+				
+				<span class="token comment">// Unboxing</span>
+				<span class="token class-name">Double</span> d5 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Double</span><span class="token punctuation">(</span><span class="token number">3.14</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token keyword">double</span> d6 <span class="token operator">=</span> d5<span class="token punctuation">;</span>
+				<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>d6<span class="token punctuation">)</span><span class="token punctuation">;</span>
+				
+				<span class="token comment">// Autoboxing Error</span>
+				<span class="token class-name">Double</span> d7 <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+				<span class="token keyword">double</span> d8 <span class="token operator">=</span> d7<span class="token punctuation">;</span>
+				<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>d8<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+</code></pre></div><p>自動裝箱與拆箱的功能是所謂的「編譯器蜜糖」（Compiler sugar），雖然使用這個功能很方便，但在程式運行階段您還是瞭解 Java 的語義，例如下面的程式是可以通過編譯的，這樣的語法在編譯時期是合法的，但是在運行時期會有錯誤</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">package</span> <span class="token namespace">kenny</span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Sample4_5</span> <span class="token punctuation">{</span>
+
+	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			
+				<span class="token comment">// Autoboxing Error</span>
+				<span class="token class-name">Double</span> d7 <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+				<span class="token keyword">double</span> d8 <span class="token operator">=</span> d7<span class="token punctuation">;</span>
+				<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>d8<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+</code></pre></div><p>因為這種寫法相當於：</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">package</span> <span class="token namespace">kenny</span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Sample4_5</span> <span class="token punctuation">{</span>
+
+	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			
+				<span class="token comment">// Autoboxing Error</span>
+				<span class="token class-name">Double</span> d7 <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+				<span class="token keyword">double</span> d8 <span class="token operator">=</span> d7<span class="token punctuation">.</span><span class="token function">doubleValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>d8<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>物件之間轉換 <code>value Of()</code>：將基本資料型態轉換為物件</li></ul> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">package</span> <span class="token namespace">kenny</span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Sample4_5</span> <span class="token punctuation">{</span>
+
+	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token comment">// TODO Auto-generated method stub</span>
+		<span class="token keyword">double</span> d1 <span class="token operator">=</span> <span class="token number">3.14</span><span class="token punctuation">;</span>
+		<span class="token class-name">Double</span> d2 <span class="token operator">=</span> <span class="token class-name">Double</span><span class="token punctuation">.</span><span class="token function">valueOf</span><span class="token punctuation">(</span>d1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>d2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>基本資料型態轉字串： String.valueOf()</li></ul> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">package</span> <span class="token namespace">kenny</span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Sample4_5</span> <span class="token punctuation">{</span>
+
+	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token comment">// String transfer to Primitive data type</span>
+		<span class="token keyword">float</span> a <span class="token operator">=</span> <span class="token number">3.14f</span><span class="token punctuation">;</span>
+		
+		<span class="token class-name">String</span> s <span class="token operator">=</span> <span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">valueOf</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li><p>字串轉基本資料型態，在資料型態前加上 <code>parse</code></p> <p><code>parseDouble()</code><br> <code>parseInt()</code><br> <code>parseFloat()</code><br> <code>parseLong()</code></p></li></ul> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">package</span> <span class="token namespace">kenny</span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Sample4_5</span> <span class="token punctuation">{</span>
+
+	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token comment">// String transfer to Primitive data type</span>
+		<span class="token class-name">String</span> a <span class="token operator">=</span> <span class="token string">&quot;3.14&quot;</span><span class="token punctuation">;</span>
+		
+		<span class="token class-name">Double</span> d <span class="token operator">=</span> <span class="token class-name">Double</span><span class="token punctuation">.</span><span class="token function">parseDouble</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="註解"><a href="#註解" class="header-anchor">#</a> 註解</h2> <ul><li>區塊註解 <code>/** ......... **/</code>：在 <code>/**</code> 與 <code>**/</code> 之間的所有文字(可跨行)都將被編譯器忽略，習慣會在隔行處多加上 <code>*</code> 來表明</li> <li>單行註解 <code>//</code> ：凡是 <code>//</code> 之後的整行文字都會被視為註解</li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/kenny/JAVA/helloworld.html" class="prev">
+        HelloWorld
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/kenny/assets/js/app.6246847d.js" defer></script><script src="/kenny/assets/js/2.56937fff.js" defer></script><script src="/kenny/assets/js/7.db156afb.js" defer></script>
+  </body>
+</html>
