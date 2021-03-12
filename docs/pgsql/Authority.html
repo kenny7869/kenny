@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>資料庫角色、使用者權限管理 | Kenny&#39;s Lab</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    
+    <meta name="description" content="Lab memo">
+    
+    <link rel="preload" href="/kenny/assets/css/0.styles.d651372b.css" as="style"><link rel="preload" href="/kenny/assets/js/app.7a8fa8e9.js" as="script"><link rel="preload" href="/kenny/assets/js/2.afc31dd2.js" as="script"><link rel="preload" href="/kenny/assets/js/20.93fc4901.js" as="script"><link rel="prefetch" href="/kenny/assets/js/10.991ca2b3.js"><link rel="prefetch" href="/kenny/assets/js/11.f6c8bd35.js"><link rel="prefetch" href="/kenny/assets/js/12.ab0f1cb7.js"><link rel="prefetch" href="/kenny/assets/js/13.73733f02.js"><link rel="prefetch" href="/kenny/assets/js/14.2491c135.js"><link rel="prefetch" href="/kenny/assets/js/15.4043c88d.js"><link rel="prefetch" href="/kenny/assets/js/16.336f6e52.js"><link rel="prefetch" href="/kenny/assets/js/17.3864eb65.js"><link rel="prefetch" href="/kenny/assets/js/18.0fc2d600.js"><link rel="prefetch" href="/kenny/assets/js/19.28d82f92.js"><link rel="prefetch" href="/kenny/assets/js/21.82f69ccb.js"><link rel="prefetch" href="/kenny/assets/js/22.bfab331f.js"><link rel="prefetch" href="/kenny/assets/js/23.7ca0506e.js"><link rel="prefetch" href="/kenny/assets/js/24.f8465dd5.js"><link rel="prefetch" href="/kenny/assets/js/25.796a6f6f.js"><link rel="prefetch" href="/kenny/assets/js/26.ea0b90a7.js"><link rel="prefetch" href="/kenny/assets/js/27.9d4fd556.js"><link rel="prefetch" href="/kenny/assets/js/28.2f10a4b4.js"><link rel="prefetch" href="/kenny/assets/js/29.0b8748b7.js"><link rel="prefetch" href="/kenny/assets/js/3.8a491a80.js"><link rel="prefetch" href="/kenny/assets/js/30.01c4553d.js"><link rel="prefetch" href="/kenny/assets/js/31.ae130e88.js"><link rel="prefetch" href="/kenny/assets/js/32.a8e97eb8.js"><link rel="prefetch" href="/kenny/assets/js/33.fecbed8e.js"><link rel="prefetch" href="/kenny/assets/js/34.781fd2f4.js"><link rel="prefetch" href="/kenny/assets/js/35.4d5b73bc.js"><link rel="prefetch" href="/kenny/assets/js/36.93531217.js"><link rel="prefetch" href="/kenny/assets/js/37.fb00688d.js"><link rel="prefetch" href="/kenny/assets/js/4.14db1eff.js"><link rel="prefetch" href="/kenny/assets/js/5.0392671a.js"><link rel="prefetch" href="/kenny/assets/js/6.8ac445ad.js"><link rel="prefetch" href="/kenny/assets/js/7.163d45b5.js"><link rel="prefetch" href="/kenny/assets/js/8.04746628.js"><link rel="prefetch" href="/kenny/assets/js/9.da5290f6.js">
+    <link rel="stylesheet" href="/kenny/assets/css/0.styles.d651372b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/kenny/" class="home-link router-link-active"><!----> <span class="site-name">Kenny's Lab</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/kenny/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux Basic" class="dropdown-title"><span class="title">Linux Basic</span> <span class="arrow down"></span></button> <button type="button" aria-label="Linux Basic" class="mobile-dropdown-title"><span class="title">Linux Basic</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/kenny/Linux/system directory.html" class="nav-link">
+  系統目錄結構與管理
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/Linux/file basic.html" class="nav-link">
+  文件基本屬性
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/Linux/account.html" class="nav-link">
+  用戶和群組管理
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/Linux/disk.html" class="nav-link">
+  磁碟管理
+</a></li></ul></div></div><div class="nav-item"><a href="/kenny/linuxserver/NetworkManager/" class="nav-link">
+  Linux Server
+</a></div><div class="nav-item"><a href="/kenny/aws server/" class="nav-link">
+  AWS Server
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="AWS Certification" class="dropdown-title"><span class="title">AWS Certification</span> <span class="arrow down"></span></button> <button type="button" aria-label="AWS Certification" class="mobile-dropdown-title"><span class="title">AWS Certification</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/kenny/aws certification/ACP-1/" class="nav-link">
+  AWS Cloud Practitioner-1
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/aws certification/SAA/" class="nav-link">
+  AWS Solutions Architect Associate
+</a></li></ul></div></div><div class="nav-item"><a href="/kenny/Network Associate/VLAN.html" class="nav-link">
+  Network Associate
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="PostgreSQL" class="dropdown-title"><span class="title">PostgreSQL</span> <span class="arrow down"></span></button> <button type="button" aria-label="PostgreSQL" class="mobile-dropdown-title"><span class="title">PostgreSQL</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/kenny/pgsql/Syntax/" class="nav-link">
+  SQL語法
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/pgsql/Database/" class="nav-link">
+  資料庫
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/pgsql/Table.html" class="nav-link">
+  表格
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/pgsql/Transaction/" class="nav-link">
+  交易管理
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/pgsql/Query.html" class="nav-link">
+  資料查詢
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/pgsql/Authority.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  資料庫角色、使用者權限管理
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JAVA" class="dropdown-title"><span class="title">JAVA</span> <span class="arrow down"></span></button> <button type="button" aria-label="JAVA" class="mobile-dropdown-title"><span class="title">JAVA</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/kenny/JAVA/helloworld.html" class="nav-link">
+  HelloWorld
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/JAVA/variable/" class="nav-link">
+  變數、資料型態、運算子
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/kenny/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux Basic" class="dropdown-title"><span class="title">Linux Basic</span> <span class="arrow down"></span></button> <button type="button" aria-label="Linux Basic" class="mobile-dropdown-title"><span class="title">Linux Basic</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/kenny/Linux/system directory.html" class="nav-link">
+  系統目錄結構與管理
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/Linux/file basic.html" class="nav-link">
+  文件基本屬性
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/Linux/account.html" class="nav-link">
+  用戶和群組管理
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/Linux/disk.html" class="nav-link">
+  磁碟管理
+</a></li></ul></div></div><div class="nav-item"><a href="/kenny/linuxserver/NetworkManager/" class="nav-link">
+  Linux Server
+</a></div><div class="nav-item"><a href="/kenny/aws server/" class="nav-link">
+  AWS Server
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="AWS Certification" class="dropdown-title"><span class="title">AWS Certification</span> <span class="arrow down"></span></button> <button type="button" aria-label="AWS Certification" class="mobile-dropdown-title"><span class="title">AWS Certification</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/kenny/aws certification/ACP-1/" class="nav-link">
+  AWS Cloud Practitioner-1
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/aws certification/SAA/" class="nav-link">
+  AWS Solutions Architect Associate
+</a></li></ul></div></div><div class="nav-item"><a href="/kenny/Network Associate/VLAN.html" class="nav-link">
+  Network Associate
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="PostgreSQL" class="dropdown-title"><span class="title">PostgreSQL</span> <span class="arrow down"></span></button> <button type="button" aria-label="PostgreSQL" class="mobile-dropdown-title"><span class="title">PostgreSQL</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/kenny/pgsql/Syntax/" class="nav-link">
+  SQL語法
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/pgsql/Database/" class="nav-link">
+  資料庫
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/pgsql/Table.html" class="nav-link">
+  表格
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/pgsql/Transaction/" class="nav-link">
+  交易管理
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/pgsql/Query.html" class="nav-link">
+  資料查詢
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/pgsql/Authority.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  資料庫角色、使用者權限管理
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JAVA" class="dropdown-title"><span class="title">JAVA</span> <span class="arrow down"></span></button> <button type="button" aria-label="JAVA" class="mobile-dropdown-title"><span class="title">JAVA</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/kenny/JAVA/helloworld.html" class="nav-link">
+  HelloWorld
+</a></li><li class="dropdown-item"><!----> <a href="/kenny/JAVA/variable/" class="nav-link">
+  變數、資料型態、運算子
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/kenny/pgsql/Database.html" class="sidebar-link">資料庫 (Database, DB)</a></li><li><a href="/kenny/pgsql/Syntax.html" class="sidebar-link">SQL 語法</a></li><li><a href="/kenny/pgsql/Table.html" class="sidebar-link">表格 (Table)</a></li><li><a href="/kenny/pgsql/Transaction.html" class="sidebar-link">交易管理 (Transaction Management)</a></li><li><a href="/kenny/pgsql/Query.html" class="sidebar-link">資料查詢</a></li><li><a href="/kenny/pgsql/Authority.html" aria-current="page" class="active sidebar-link">資料庫角色、使用者權限管理</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/kenny/pgsql/Authority.html#postgresql-資料庫授權層級" class="sidebar-link">PostgreSQL 資料庫授權層級</a></li><li class="sidebar-sub-header"><a href="/kenny/pgsql/Authority.html#建立資料庫的使用者" class="sidebar-link">建立資料庫的使用者</a></li><li class="sidebar-sub-header"><a href="/kenny/pgsql/Authority.html#public-schema-與-public-角色" class="sidebar-link">public Schema 與 public 角色</a></li><li class="sidebar-sub-header"><a href="/kenny/pgsql/Authority.html#建立資料庫角色" class="sidebar-link">建立資料庫角色</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="資料庫角色、使用者權限管理"><a href="#資料庫角色、使用者權限管理" class="header-anchor">#</a> 資料庫角色、使用者權限管理</h1> <p>PostgreSQL 可以直接針對資料庫的使用者設定權限，也可以先對不同的應用設定好不同的規則（roles），再將不同的規則套用至需要授權的使用者，這樣的方式可以讓管理上夠有彈性，但是可能也會讓管理的操作更為複雜</p> <h2 id="postgresql-資料庫授權層級"><a href="#postgresql-資料庫授權層級" class="header-anchor">#</a> PostgreSQL 資料庫授權層級</h2> <p>在 PostgreSQL 中的權限有分為 database、schema 與 object 三個層級，想要授權使用者存取一張資料表（table），就要同時確認該使用者也擁有該資料表所在 database 以及 schema 的存取權限，如果中間缺少了任何一層的權限，就會無法存取</p> <p><img src="/kenny/assets/img/psql-11.b193bab6.png" alt="psql-11" title="psql-11"></p> <h2 id="建立資料庫的使用者"><a href="#建立資料庫的使用者" class="header-anchor">#</a> 建立資料庫的使用者</h2> <p>可以使用 <code>CREATE USER</code> 或 <code>CREATE ROLE</code> 指令：</p> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token comment">-- CREATE USER 指令</span>
+<span class="token keyword">CREATE</span> <span class="token keyword">USER</span> username
+<span class="token keyword">WITH</span> PASSWORD <span class="token string">'password'</span><span class="token punctuation">;</span>
+
+<span class="token comment">-- CREATE ROLE 指令</span>
+<span class="token keyword">CREATE</span> ROLE username
+<span class="token keyword">WITH</span> LOGIN PASSWORD <span class="token string">'password'</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="public-schema-與-public-角色"><a href="#public-schema-與-public-角色" class="header-anchor">#</a> public Schema 與 public 角色</h2> <ul><li><p>當一個全新的 PostgreSQL 資料庫被建立時，預設會自動建立一個名稱為 public 的 schema，並將存取權限授予 public 這一個角色，新建立的使用者預設只會繼承 public 角色中所開放的權限，其餘權限都沒有開放</p></li> <li><p>當需要建立一個唯讀的使用者帳號（只能讀取、不可寫入資料）時，就必須將 public 角色中的可在 public schema 建立物件的權限拿掉</p></li></ul> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">REVOKE</span> <span class="token keyword">CREATE</span> <span class="token keyword">ON</span> <span class="token keyword">SCHEMA</span> <span class="token keyword">public</span> <span class="token keyword">FROM</span> <span class="token keyword">PUBLIC</span><span class="token punctuation">;</span>
+
+<span class="token comment">-- 將 public 角色連線至指定資料庫的權限撤除</span>
+<span class="token keyword">REVOKE</span> <span class="token keyword">ALL</span> <span class="token keyword">ON</span> <span class="token keyword">DATABASE</span> databasename <span class="token keyword">FROM</span> <span class="token keyword">PUBLIC</span><span class="token punctuation">;</span>
+</code></pre></div><p>經過這樣的設定之後，需要連線至資料庫的使用者都需要明確以指令進行授權，否則都不可以連線至資料庫</p> <h2 id="建立資料庫角色"><a href="#建立資料庫角色" class="header-anchor">#</a> 建立資料庫角色</h2> <p>為了給使用者分配權限，使用 <code>GRANT</code> 指令<br>
+語法：</p> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">GRANT</span> privilege <span class="token punctuation">[</span><span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">]</span>
+<span class="token keyword">ON</span> object <span class="token punctuation">[</span><span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">]</span>
+<span class="token keyword">TO</span> { <span class="token keyword">PUBLIC</span> <span class="token operator">|</span> <span class="token keyword">GROUP</span> <span class="token keyword">group</span> <span class="token operator">|</span> username }
+</code></pre></div><p>privilege 可能的值有：SELECT, INSERT, UPDATE, USAGE, DELETE, RULE, ALL<br>
+object 可能的物件是：表、視圖、序列<br>
+PUBLIC：代表所有使用者<br>
+GROUP group：代表群組<br>
+username：授予權限的使用者名稱</p> <ul><li>設定唯讀角色</li></ul> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token comment">-- 授予角色可連線至資料庫的權限</span>
+<span class="token keyword">GRANT</span> <span class="token keyword">CONNECT</span> <span class="token keyword">ON</span> <span class="token keyword">DATABASE</span> databasename <span class="token keyword">TO</span> username<span class="token punctuation">;</span>
+<span class="token comment">--授予角色可使用 schema 的權限</span>
+<span class="token keyword">GRANT</span> <span class="token keyword">USAGE</span> <span class="token keyword">ON</span> <span class="token keyword">SCHEMA</span> schemaname <span class="token keyword">TO</span> username<span class="token punctuation">;</span>
+<span class="token comment">--授予角色可對 schema 的所有資料表進行 SELECT 操作</span>
+<span class="token keyword">GRANT</span> <span class="token keyword">SELECT</span> <span class="token keyword">ON</span> <span class="token keyword">ALL</span> <span class="token keyword">TABLES</span> <span class="token operator">IN</span> <span class="token keyword">SCHEMA</span> schemaname <span class="token keyword">TO</span> username<span class="token punctuation">;</span>
+<span class="token comment">-- 授予角色可對單一資料表進行 SELECT 操作</span>
+<span class="token keyword">GRANT</span> <span class="token keyword">SELECT</span> <span class="token keyword">ON</span> <span class="token keyword">TABLE</span> tablename <span class="token keyword">TO</span> username<span class="token punctuation">;</span>
+<span class="token comment">-- 設定角色對 schema 新資料表的預設權限</span>
+<span class="token keyword">ALTER</span> <span class="token keyword">DEFAULT</span> <span class="token keyword">PRIVILEGES</span> <span class="token operator">IN</span> <span class="token keyword">SCHEMA</span> schemaname
+<span class="token keyword">GRANT</span> <span class="token keyword">SELECT</span> <span class="token keyword">ON</span> <span class="token keyword">TABLES</span> <span class="token keyword">TO</span> username<span class="token punctuation">;</span>
+</code></pre></div><ul><li>設定讀寫角色</li></ul> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token comment">-- 授予角色可在 schema 中使用或建立物件</span>
+<span class="token keyword">GRANT</span> <span class="token keyword">USAGE</span><span class="token punctuation">,</span> <span class="token keyword">CREATE</span> <span class="token keyword">ON</span> <span class="token keyword">SCHEMA</span> schemaname <span class="token keyword">TO</span> username<span class="token punctuation">;</span>
+<span class="token comment">-- 授予角色可對 schema 的特定資料表進行各種操作</span>
+<span class="token keyword">GRANT</span> <span class="token keyword">ALL</span> <span class="token keyword">PRIVILEGES</span> <span class="token keyword">ON</span> <span class="token keyword">TABLE</span> tablename <span class="token keyword">TO</span> username<span class="token punctuation">;</span>
+<span class="token comment">-- 設定角色對 schema 新資料表的預設權限</span>
+<span class="token keyword">ALTER</span> <span class="token keyword">DEFAULT</span> <span class="token keyword">PRIVILEGES</span> <span class="token operator">IN</span> <span class="token keyword">SCHEMA</span> schemaname
+<span class="token keyword">GRANT</span> <span class="token keyword">ALL</span> <span class="token keyword">PRIVILEGES</span> <span class="token keyword">ON</span> <span class="token keyword">TABLES</span> <span class="token keyword">TO</span> username<span class="token punctuation">;</span>
+</code></pre></div><p>對於讀寫角色而言，通常都會需要對 sequences 的使用進行授權</p> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token comment">-- 授予角色可以使用指定的 Sequence</span>
+<span class="token keyword">GRANT</span> <span class="token keyword">USAGE</span> <span class="token keyword">ON</span> SEQUENCE Sequencename <span class="token keyword">TO</span> username<span class="token punctuation">;</span>
+<span class="token comment">-- 授予角色可以使用所有的 Sequences</span>
+<span class="token keyword">GRANT</span> <span class="token keyword">USAGE</span> <span class="token keyword">ON</span> <span class="token keyword">ALL</span> SEQUENCES <span class="token operator">IN</span> <span class="token keyword">SCHEMA</span> schemaname <span class="token keyword">TO</span> username<span class="token punctuation">;</span>
+<span class="token comment">-- 設定角色對 schema 新 Sequences 的預設權限</span>
+<span class="token keyword">ALTER</span> <span class="token keyword">DEFAULT</span> <span class="token keyword">PRIVILEGES</span> <span class="token operator">IN</span> <span class="token keyword">SCHEMA</span> schemaname
+<span class="token keyword">GRANT</span> <span class="token keyword">USAGE</span> <span class="token keyword">ON</span> SEQUENCES <span class="token keyword">TO</span> username<span class="token punctuation">;</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/kenny/pgsql/Query.html" class="prev">
+        資料查詢
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/kenny/assets/js/app.7a8fa8e9.js" defer></script><script src="/kenny/assets/js/2.afc31dd2.js" defer></script><script src="/kenny/assets/js/20.93fc4901.js" defer></script>
+  </body>
+</html>
