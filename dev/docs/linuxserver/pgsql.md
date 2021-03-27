@@ -33,9 +33,11 @@ sudo dnf module install postgresql:9.6
 sudo dnf install postgresql-contrib
 ```
 
+## 官網 RPM 安裝包
 
 - 只安裝 server
-Server
+ 
+rpm 下載網址：<https://www.postgresql.org/>
 
 ```sh
 dnf install https://download.postgresql.org/pub/repos/yum/reporpms/EL-8-x86_64/pgdg-redhat-repo-latest.noarch.rpm
@@ -52,6 +54,13 @@ dnf -y install postgresql96-contrib
 systemctl enable postgresql-9.6
 systemctl start postgresql-9.6
 ```
+安裝好之後lib目錄存放位置
+
+![rsys-3](./rsyslog/rsys-3.jpg "rsys-3")
+
+安裝好之後 config 目錄存放位置
+
+![rsys-4](./rsyslog/rsys-4.jpg "rsys-4")
 
 ## Config
 

@@ -50,6 +50,7 @@ module.exports = {
       items: [
       {text: "HelloWorld", link:"/JAVA/helloworld"}, 
       {text: "變數、資料型態、運算子", link:"/JAVA/variable/"},
+      {text: "字串與陣列", link:"/JAVA/string/"},
       ],
      
     },
@@ -113,6 +114,7 @@ module.exports = {
      //"",
      "helloworld", 
      "variable",
+     "string",
     ],
       
 
