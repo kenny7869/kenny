@@ -84,7 +84,7 @@ module.exports = {
       "/pgsql/": [
       //"",
       "Database",
-      "Syntax",
+      "syntax",
       "Table",
       "Transaction",
       "Query",
