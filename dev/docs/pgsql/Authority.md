@@ -94,3 +94,23 @@ ALTER DEFAULT PRIVILEGES IN SCHEMA schemaname
 GRANT USAGE ON SEQUENCES TO username;
 ```
 
+## 紀錄資料庫帳號的特定行為
+
+- 修改 postgresql.conf 檔案
+
+```sh
+cd /var/lib/pgsql/9.6/data
+vim postgresql.conf
+```
+
+- 找到 `log_statement` 設定為 `none`
+
+```sh
+log_statement = 'none'
+```
+
+- 再進到資料庫針對特定帳號設定 log_statement 為 mod
+
+```sql
+alter role postgres set log_statement = 'mod';
+```

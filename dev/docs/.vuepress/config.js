@@ -51,6 +51,7 @@ module.exports = {
       {text: "HelloWorld", link:"/JAVA/helloworld"}, 
       {text: "變數、資料型態、運算子", link:"/JAVA/variable/"},
       {text: "字串與陣列", link:"/JAVA/string/"},
+      {text: "控制流程語法", link:"/JAVA/controlflow"},
       ],
      
     },
@@ -84,7 +85,7 @@ module.exports = {
       "/pgsql/": [
       //"",
       "Database",
-      "syntax",
+      "Syntax",
       "Table",
       "Transaction",
       "Query",
@@ -115,6 +116,7 @@ module.exports = {
      "helloworld", 
      "variable",
      "string",
+     "controlflow",
     ],
       
 

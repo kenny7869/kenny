@@ -1,16 +1,15 @@
-# AWS Cloud Practitioner
+# AWS Cloud Practitioner 01
 
-1. What is benefit of choosing reserved instance over on-demand instance? 
+1. VPC gateway endpoint 適用支援的 AWS 服務：**S3**、**DynamoDB** 
 
-* [x] **Lower cost when compared to on-demand.**
+2. 可用於分離 AWS Cloud 上基於微服務的應用程序元件的 AWS 服務有：
 
-2. Which of the following is a correct relationship between regions, Availablility Zones, and edge locations？
+- Amazon Simple Queue Service (Amazon SQS)：提供安全、耐用且可用的託管佇列，可整合並讓分散式軟體系統和元件分離，使用 SQS 可以在任何數量下的軟體組件之間發送，存儲和接收消息，而不會丟失消息或要求其他可用服務
+- Amazon Simple Notification Service （Amazon SNS）： 是高度可用、耐用且安全的全受管發佈/訂閱簡訊服務，可讓您分離微型服務、分散式系統及事件驅動的無伺服器應用程式。Amazon SNS 所提供的主題，皆適用於高傳輸量、以推播為基礎的多對多簡訊
 
-* [x] **Regions contain Availability Zones.**
+3. 應用程式需要能夠提供快速 I / O 性能的高性能硬件磁碟，哪個存儲選項可以作為 CP 值最高的解決方案？
 
-3. Kenny is a DevOps and he wants to ensure that all servers are working perfectly. One of the aspects is monitor the CPU usage. Application tends to slow down when CPU usage is greater than 60%. How can he track down when CPU usage goes above 60% EC2 instance？
-
-* [x] **Use CloudWatch Alarms.**
+- Instance Store (執行個體存放區)：Instance Store 提供暫時的區塊層級儲存空間。這個儲存空間位於實際連接到主機電腦的磁碟上，非常適合用來暫時儲存經常變更的資訊，例如緩衝區、快取、臨時資料和其他暫時性的內容，也非常適合複製到整個執行個體機群的資料，例如網頁伺服器的負載平衡集區
 
 4. Which of the following can limit Amazon Storage Service (Amazon S3) bucket access to specific users ?
 
