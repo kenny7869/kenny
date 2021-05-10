@@ -64,6 +64,8 @@ module.exports = {
         "",
         "awshttpd2tomcat",
         "IAM",
+        "EC2",
+        "Spot Instance",
         "VPC",
         "XRay",  
         ],
