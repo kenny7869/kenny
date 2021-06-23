@@ -1,4 +1,5 @@
 module.exports = {
+  port:9443,
   markdown: {
     extendMarkdown: md => {
       md.set({ breaks: true })
@@ -33,7 +34,6 @@ module.exports = {
        {text: "AWS Solutions Architect Associate", link:"/aws certification/SAA/"},
               ],
       },
-      {text: "Network Associate", link:"/Network Associate/VLAN"},
       {text: "PostgreSQL", 
       /* ariaLabel: "English Menu", */
       items: [
@@ -52,9 +52,14 @@ module.exports = {
       {text: "變數、資料型態、運算子", link:"/JAVA/variable/"},
       {text: "字串與陣列", link:"/JAVA/string/"},
       {text: "控制流程語法", link:"/JAVA/controlflow"},
+      ], 
+      },
+      {text: "Spring 5",
+
+      items: [
+        {text: "Spring Core", link:"/Spring/Spring Core"},
       ],
-     
-    },
+      },
         ],
 
 	sidebarDepth: 2,
@@ -107,18 +112,17 @@ module.exports = {
       "pgsql",
     ],
 
-    "/Network Associate/": [
-      //"",
-      "VLAN",
-      "STP",
-    ],
-
     "/JAVA/": [
      //"",
      "helloworld", 
      "variable",
      "string",
      "controlflow",
+    ],
+
+    "/Spring/": [
+      //"",
+      "Spring Core",
     ],
       
 
