@@ -37,7 +37,7 @@ module.exports = {
       {text: "PostgreSQL", 
       /* ariaLabel: "English Menu", */
       items: [
-      { text: "SQL語法", link:"/pgsql/Syntax/" },
+      { text: "SQL語法", link:"/pgsql/syntax/" },
       { text: "資料庫", link:"/pgsql/Database/"},
       { text: "表格", link:"/pgsql/Table"},
       { text: "交易管理", link:"/pgsql/Transaction/"},
@@ -92,7 +92,7 @@ module.exports = {
       "/pgsql/": [
       //"",
       "Database",
-      "Syntax",
+      "syntax",
       "Table",
       "Transaction",
       "Query",
