@@ -76,7 +76,7 @@
 - 當 Java 物件由 Spring Container 創建時，Spring 將它們稱為 “Spring Beans”
 - 綜上所述，每當看到 Spring Bean 時，就聯想到 Java 物件
 
-## Dependency Injection
+### Dependency Injection
 
 - 給予調用方它所需要的事物，「Dependency」是指可被方法調用的事物。「Injection」是指將「Dependency」傳遞給調用方的過程
     示意圖：
@@ -123,7 +123,7 @@
 
     ![springO_5_10](./springO/SpringO_5_10.jpg "springO_5_10")
 
-## Bean Scopes 
+### Bean Scopes 
 
 - Default Scope：Singleton
     - Spring Container 預設只創建一個 bean 的 instance
@@ -146,7 +146,7 @@
 
 ![springO_6_4](./springO/SpringO_6_3.jpg "springO_6_4")
 
-## Bean Lifecycle Methods
+### Bean Lifecycle Methods
 
 - Bean Lifecycle
 
@@ -167,6 +167,190 @@
     1. 定義 init 和 destroy 的方法
     2. 在 Spring 配置文件中配置方法名稱
     
+## Annotations Overview
+
+### Java Annotations
+
+- 添加到 Java class 的特殊標籤/標記
+- 提供有關 class 的中繼資料(meta-data)
+- Annotion (註解) 是一個介面，程式可以通過反射來獲取指定的 Annotion 物件，然後通過 Annotion 物件來獲取註解裡面的中繼資料
+
+- 為什麼 Spring 配置帶有 Annotations？
+    - XML 配置可能很冗長
+    - 使用 Annotation 配置 Spring bean
+    - Annotation 最大限度地減少了 XML 配置
+
+- 掃描 Component Classes
+    - Spring 將掃描 Java class 以查找特殊 Annotation
+    - 自動註冊 bean 到 Spring container
+
+- 開發步驟：
+    1. 在 Spring 配置文件中啟用掃描 Component Classes
+    
+    ![springO_8_1](./springO/SpringO_8_1.jpg "springO_8_1")
+
+    2. 將 @Component Annotation 添加到 Java class
+
+    ![springO_8_2](./springO/SpringO_8_2.jpg "springO_8_2")
+
+    3. 從 Spring container 中檢索 bean
+
+    ![springO_8_3](./springO/SpringO_8_3.jpg "springO_8_3")
+
+- @Components 預設 Bean ID 名稱為 class 名稱，首字母為小寫
+
+![springO_8_4](./springO/SpringO_8_4.jpg "springO_8_4")
+
+### Dependency Injection with Annotations and Autowiring
+
+- 什麼是 Autowiring？
+    - 可以自動連接 dependency injection、Spring
+    - Spring 會尋找匹配屬性的 class
+    - Spring 會自動 inject
+
+- Autowiring Injection 型態
+    - Constructor Injection 開發步驟：
+        1. 定義 dependency 的 interface 和 class
+
+        ![springO_9_1](./springO/SpringO_9_1.jpg "springO_9_1")
+
+        2. 在 class 中創建一個 Constructor Injection
+
+        ![springO_9_2](./springO/SpringO_9_2.jpg "springO_9_2")
+
+        3. 使用@Autowired Annotation 配置 Dependency Injection
+
+        ![springO_9_3](./springO/SpringO_9_3.jpg "springO_9_3")
+
+    - Setter Injection 開發步驟
+        1. 在 class 中創建 setter 方法進行注入
+
+        ![springO_9_4](./springO/SpringO_9_4.jpg "springO_9_4")
+
+        2. 使用 @Autowired Annotation 配置 Dependency Injection
+
+        ![springO_9_5](./springO/SpringO_9_5.jpg "springO_9_5")
+
+    - Field Injections 開發步驟
+        1. 使用 Autowired Annotation 配置 Dependency Injection，不須使用 setter 方法，直接調用變數
+
+        ![springO_9_6](./springO/SpringO_9_6.jpg "springO_9_6")
+
+- Annotation Autowiring and Qualifiers
+    - 當有兩個 Bean Instance，此時可加上@Qualifier 來決定要注入哪個 Instance
+
+    ![springO_9_7](./springO/SpringO_9_7.jpg "springO_9_7")
+
+- Bean Scopes with Annotations
+    - Singleton Scope Example
+
+    ![springO_9_8](./springO/SpringO_9_8.jpg "springO_9_8")
+
+    - Prototype Scope Example
+
+    ![springO_9_9](./springO/SpringO_9_9.jpg "springO_9_9")
+
+- Bean Lifecycle Methods with Annotations
+    - 定義 init 和 destroy 的方法，加入 Annotations @PostConstruct 和 @PreDestroy
+
+    ![springO_9_10](./springO/SpringO_9_10.jpg "springO_9_10")
+
+    ![springO_9_11](./springO/SpringO_9_11.jpg "springO_9_11")
+
+### Spring Configuration with Java Code
+
+- 使用 Spring container 取代 XML
+- 使用 Java 代碼配置 Spring container
+- 配置 Spring container 的3種方式
+    1. 完整的 XML 配置
+
+    ![springO_10_1](./springO/SpringO_10_1.jpg "springO_10_1")
+
+    2. XML Component 掃描
+
+    ![springO_10_2](./springO/SpringO_10_2.jpg "springO_10_2")
+
+    3. Java 配置 class
+
+    ![springO_10_3](./springO/SpringO_10_3.jpg "springO_10_3")
+
+    - 開發步驟
+        1. 創建一個Java class 並註解為@Configuration
+
+        ![springO_10_4](./springO/SpringO_10_4.jpg "springO_10_4")
+
+        2. 添加 Component 掃描 @ComponentScan（可選）
+
+        ![springO_10_5](./springO/SpringO_10_5.jpg "springO_10_5")
+
+        3. 讀取 Spring Java 配置 class
+
+        ![springO_10_6](./springO/SpringO_10_6.jpg "springO_10_6")
+
+        4. 從 Spring container 中檢索 bean
+
+        ![springO_10_7](./springO/SpringO_10_7.jpg "springO_10_7")
+
+- Defining Beans with Java Code
+    - 開發步驟
+        1. 定義 bean 的方法
+
+        ![springO_10_8](./springO/SpringO_10_8.jpg "springO_10_8")
+
+        2. 注入 bean dependencies
+
+        ![springO_10_9](./springO/SpringO_10_9.jpg "springO_10_9")
+
+        3. 讀取 Spring Java 配置 class
+
+        ![springO_10_10](./springO/SpringO_10_10.jpg "springO_10_10")
+
+        4. 從 Spring container 中檢索 bean
+
+        ![springO_10_11](./springO/SpringO_10_11.jpg "springO_10_11")
+
+- Injecting Values from Properties File
+    - 開發步驟
+        1. 創建 Properties File
+
+        ![springO_10_12](./springO/SpringO_10_12.jpg "springO_10_12")
+
+        2. 在 Spring 配置文件中加載 Properties File
+
+        ![springO_10_13](./springO/SpringO_10_13.jpg "springO_10_13")
+
+        3. 以 Properties File 值作為依據
+
+        ![springO_10_14](./springO/SpringO_10_14.jpg "springO_10_14")
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
 
 
 
