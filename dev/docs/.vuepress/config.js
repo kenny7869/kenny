@@ -58,6 +58,7 @@ module.exports = {
 
       items: [
         {text: "Spring Core", link:"/Spring/Spring Core"},
+        {text: "Spring MVC", link:"/Spring/Spring MVC"},
       ],
       },
         ],
@@ -123,6 +124,7 @@ module.exports = {
     "/Spring/": [
       //"",
       "Spring Core",
+      "Spring MVC",
     ],
       
 

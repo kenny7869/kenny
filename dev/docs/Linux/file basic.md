@@ -138,3 +138,51 @@ chgrp [-cfhRv] [-help] [-version] [所屬分類] [文件或目錄...]或chgrp [-
 - --help：在線幫助
 - --reference = <參考文件或目錄>：將指定文件或目錄的所屬類別全部歸為一體和參考文件或目錄的所屬類別相同
 - --version：顯示版本信息
+
+## Brace expansion (大括號擴展)
+
+- 大括號擴展(Brace expansion)是一種機制，協助我們使用省略的字串產生相對應的字串組合
+
+這裡以指令 `touch` 示範，套用到 `cp` 指令後，檔案 foo1.txt 內容就會複製到 foo2.txt
+
+```sh
+# touch foo{1,2}.txt
+# ls
+foo1.txt foo2.txt
+
+# echo 123 > foo1.txt
+# cp foo{1,2}.txt
+# cat foo2.txt
+123
+```
+
+- 大括號擴展比較常用的關鍵字有 逗號(,) 和 句號(.)，逗號是用來分開不同的字串，而句號是用來產生有序列性的字串
+
+**逗號：**
+```sh
+# echo file{,1,2}
+file file1 file2
+# mkdir -v file{,1,2}
+mkdir: created directory 'file'
+mkdir: created directory 'file1'
+mkdir: created directory 'file2'
+```
+
+**句號：**
+```sh
+# echo file{1..5}
+file1 file2 file3 file4 file5
+# mkdir -v file{1..5}
+mkdir: created directory 'file1'
+mkdir: created directory 'file2'
+mkdir: created directory 'file3'
+mkdir: created directory 'file4'
+mkdir: created directory 'file5'
+```
+
+- 在一個字串中同時放很多個 Brace expansion
+
+```sh
+# echo {apache,nginx}-{index,default}-0{1..2}.html
+apache-index-01.html apache-index-02.html apache-default-01.html apache-default-02.html nginx-index-01.html nginx-index-02.html nginx-default-01.html nginx-default-02.html
+```
