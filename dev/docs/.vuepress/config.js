@@ -33,7 +33,7 @@ module.exports = {
       {text: "SFTP簡易設定", link: "/linuxserver/sftp/"},
       {text: "SSL與SNI設定", link: "/linuxserver/SSL SNI/"},
       {text: "Rsyslog簡易設定", link: "/linuxserver/rsyslog/"},
-      {text: "Apache與Tomcat簡易安裝與設定", link: "/linuxserver/http2tomcat"},
+      {text: "Apache與Tomcat簡易安裝與設定", link: "/linuxserver/httpd2tomcat"},
       ],
       },
       { text: "AWS Server", link: "/aws server/"},
