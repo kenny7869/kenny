@@ -34,19 +34,43 @@ systemctl status NetworkManager
 - nmtui：一個簡單的基於 curses 的文本用戶界面，還用於配置和管理 newtwork 界面連接。
 - 列出 NetworkManager 檢測到的設備
 
-```sh
+```
 nmcli device
 # or
 nmcli device status
 ```
 
-- 要查看所有活動連接，請運行以下命令(注意，如果沒有-a，它將列出可用的連接配置文件)。
+- 顯示 NetworkManager 總體狀態
+
+```
+nmcli general status
+```
+
+- 顯示 NetworkManager 日誌記錄
+
+```
+nmcli general logging
+```
+
+- 顯示所有活動連接
+
+```
+nmcli connection show
+```
+
+- 只顯示當前活動連接，記得添加 `-a`、`－-active`
 
 ```
 nmcli connection show -a
 ```
 
-- 在 CentOS/RHEL 8 上設置靜態 IP 地址
+- 顯示由 NetworkManager 識別到設備及其狀態：
+
+```
+nmcli device status
+```
+
+- 在 CentOS/RHEL 上設置靜態 IP 地址
 
 ```sh
 vim /etc/sysconfig/network-scripts/ifcfg-eth0
